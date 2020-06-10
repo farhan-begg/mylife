@@ -1,0 +1,13 @@
+.Navbar {
+    background-color:#bbb2b5;
+    padding: 10px;
+    color: white;
+    border-radius: 25px;
+}
+
+.navlink {
+    display: flex;
+    align-items: right;
+    background-color: red;
+
+}
