@@ -5,27 +5,27 @@ import './Landing.css';
 
 function Landing() {
 
-    return (
+  return (
+    <div>
       <div>
-        <div>
-          <header className="header" >
-            <img src={`${process.env.PUBLIC_URL}images/LandingImage.jpg`} alt="Logo" className="image" />
-            <div className="logo-box">
-              <img src={`${process.env.PUBLIC_URL}images/Logo.png`} alt="Logo" className="logo" />
-              
-            </div>
-          <div className="text-box">
-              <h1 className="heading-primary">
-                  <span className="heading-primary-main">myLyfe</span>
-              <span className="heading-primary-sub">Time To Level Up</span>
-              </h1>
-              <a href="" className="btn btn-white btn-animated">Start Your Journey</a>
+        <header className="header" >
+          <img src={`${process.env.PUBLIC_URL}images/LandingImage.jpg`} alt="Logo" className="image" />
+          <div className="logo-box">
+            <img src={`${process.env.PUBLIC_URL}images/Logo.png`} alt="Logo" className="logo" />
+
           </div>
-          </header>
-        </div>
+          <div className="text-box">
+            <h1 className="heading-primary">
+              <span className="heading-primary-main">myLyfe</span>
+              <span className="heading-primary-sub">Time To Level Up</span>
+            </h1>
+            <a href="/signup" className="btn btn-white btn-animated">Start Your Journey</a>
+          </div>
+        </header>
       </div>
-    
-    );
-  }
-  
-  export default Landing;
+    </div>
+
+  );
+}
+
+export default Landing;
