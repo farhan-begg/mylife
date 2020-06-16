@@ -1,0 +1,13 @@
+.Navbar {
+    background-color:#8f99a5;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 25px;
+}
+
+
+.brand {
+    height: 40px;
+    width: 40px;
+}
