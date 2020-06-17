@@ -16,29 +16,29 @@ import { auth, addUserDocument } from './firebase'
 
 
 class App extends Component {
-  constructor() {
-    super();
+  // constructor() {
+  //   super();
 
-    this.state = {
-      currentUser: null
-    }
-  }
+  //   this.state = {
+  //     currentUser: null
+  //   }
+  // }
 
-  componentDidMount() {
-    this.unsubsribe = auth.onAuthStateChanged(async (authenticated) => {
-      if (authenticated) {
-        // User is signed in.
-        addUserDocument(authenticated)
-        console.log(authenticated)
-      } else {
-        // No user is signed in.
-      }
-    });
-  }
+  // componentDidMount() {
+  //   this.unsubsribe = auth.onAuthStateChanged(async (authenticated) => {
+  //     if (authenticated) {
+  //       // User is signed in.
+  //       addUserDocument(authenticated)
+  //       console.log(authenticated)
+  //     } else {
+  //       // No user is signed in.
+  //     }
+  //   });
+  // }
 
-  componentWillUnmount() {
-    this.unsubsribe();
-  }
+  // componentWillUnmount() {
+  //   this.unsubsribe();
+  // }
 
 
   render() {
