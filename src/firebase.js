@@ -31,6 +31,31 @@ provider.setCustomParameters({
     'propmt': 'select_account'
 });
 
+export const addUserDocument = async (authenticated) => {
+    if (!authenticated) return;
+    const userRef = firestore.doc(`users/${authenticated.uid}`)
+    const snapShot = await userRef.get()
+
+    console.log(snapShot)
+    if (!snapShot.exist) {
+
+        const { displayName, email } = authenticated
+        const timeCreated = new Date()
+
+        try {
+            await userRef.set({
+                displayName,
+                email,
+                timeCreated
+            })
+        } catch (error) {
+            console.log("there was a problem " + error.message)
+        }
+
+    }
+
+    return userRef
+}
 
 
 
