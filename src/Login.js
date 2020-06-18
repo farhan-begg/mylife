@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
-import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import { auth } from './firebase'
+
 
 
 class Login extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
-            email: "",
-            password: ""
+            email: '',
+            password: ''
         }
     }
 
@@ -17,26 +19,28 @@ class Login extends Component {
         const { name, value } = e.target
         this.setState({ [name]: value })
         console.log(value)
-
     }
 
     onSubmit = e => {
-        console.log("testing")
+        const { email, password } = this.state
+        try {
+            auth.signInWithEmailAndPassword(email, password)
+            alert("You have signed in!")
+        } catch (error) {
+            console.log("there was a problem: ", + error.message)
+        }
     }
-
-
 
 
     render() {
         return (
             <div>
                 <h1>Login</h1>
-
-                <Form>
-
+                <Form onSubmit={this.onSubmit}>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" name="email" onChange={this.onHandleChange} />
+
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
@@ -48,7 +52,6 @@ class Login extends Component {
                         Submit
                     </Button>
                 </Form>
-
             </div>
         )
     }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
-import { auth, provider } from './firebase'
+import Button from 'react-bootstrap/Button'
+import { auth, provider, addUserDocument } from './firebase'
+
 
 class Register extends Component {
     constructor() {
@@ -11,7 +12,7 @@ class Register extends Component {
             displayName: '',
             email: '',
             password: '',
-            confirmpassword: '',
+            confirmpassword: ''
 
         }
     }
@@ -20,12 +21,25 @@ class Register extends Component {
         const { name, value } = e.target
         this.setState({ [name]: value })
         console.log(value)
-
     }
 
+    onSubmit = async e => {
+        e.preventDefault();
+        const { displayName, email, password, confirmpassword } = this.state
 
-    onSubmit = e => {
-        console.log("testing")
+        try {
+            const { reguser } = await auth.createUserWithEmailAndPassword(email, password)
+            addUserDocument(reguser)
+            alert("You are now registered!")
+            this.setState({
+                displayName: '',
+                email: '',
+                password: '',
+                confirmpassword: ''
+            })
+        } catch (error) {
+            console.log("there was a problem: " + error.message)
+        }
     }
 
     signInWithGoogle = e => {
@@ -50,30 +64,24 @@ class Register extends Component {
 
     signOutFromGoogle = e => {
         auth.signOut().then(function () {
-            console.log('You have signed out')
+            console.log("You have signed out")
             // Sign-out successful.
         }).catch(function (error) {
             // An error happened.
-            console.log('error')
+            console.log(error.message)
         });
-
     }
-
-
-
-
 
     render() {
         return (
             <div>
                 <h1>Register</h1>
 
-                <Form>
-                    <Form.Group controlId="formBasicEmail">
+                <Form onSubmit={this.onSubmit}>
+                    <Form.Group controlId="formBasicDisplay">
                         <Form.Label>Display Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter User Name" name="dname" onChange={this.onHandleChange} />
+                        <Form.Control type="text" placeholder="Enter display name" name="dname" onChange={this.onHandleChange} />
                     </Form.Group>
-
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" name="email" onChange={this.onHandleChange} />
@@ -83,28 +91,26 @@ class Register extends Component {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" name="password" onChange={this.onHandleChange} />
                     </Form.Group>
-
                     <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" name="confirmpassword" onChange={this.onHandleChange} />
+                        <Form.Label> Confirm Password</Form.Label>
+                        <Form.Control type="password" placeholder="Confirm Password" name="confirmpassword" onChange={this.onHandleChange} />
                     </Form.Group>
 
                     <Button variant="primary" type="submit">
                         Submit
-                    </Button>
+                     </Button>
                 </Form>
 
                 <Button variant="success" type="submit" onClick={this.signInWithGoogle}>
-                    Google Sign In
+                    Google Sign IN
                 </Button>
 
-                <Button variant="warning" type="submit" onClick={this.signOutFromGoogle}>
-                    Google Sign Out
-                </Button>
+                <Button variant="secondary" type="submit" onClick={this.signOutFromGoogle}>
+                    Google Sign OUT
+                 </Button>
 
             </div>
         )
     }
 }
-
-export default Register 
+export default Register
