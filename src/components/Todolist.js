@@ -1,11 +1,15 @@
 import React from 'react';
 import { Header } from './layout/Header';
+import { Content } from './layout/Content'
 
-export const Todolist = () => {
-    <Router>
+function Todolist() {
+    return (
         <div className='Todolist'>
             <Header />
-            <Route path='/todolist' />
+            <Content />
         </div>
-    </Router>
+    
+    )
 }
+ 
+export default Todolist;

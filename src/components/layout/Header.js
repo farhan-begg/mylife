@@ -1,18 +1,22 @@
 import React from 'react';
-import {FaPizzaSlice} from 'react-icons/fa';
+import { FaPizzaSlice } from 'react-icons/fa';
 
 
 export const Header = () => {
-    return <header className='header' data-testid='header'>
-        <nav>
-            <div className='settigns'>
-                <ul>
-                    <li>+</li>
-                    <li>
-                        <FaPizzaSlice />
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    return (
+        <header className='header' data-testid='header'>
+            <nav>
+                <div className='settings'>
+                    <ul>
+                        <li>+</li>
+                        <li>
+                            <FaPizzaSlice />
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    )
 }
+
+export default Header

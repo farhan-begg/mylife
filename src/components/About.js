@@ -10,8 +10,6 @@ function About() {
                 caption={"Todo List"}
                 
             />
-            <a href="/todolist">Todo List</a>
-               
             <Fig
                 width={300}
                 height={300}
