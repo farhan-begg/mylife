@@ -1,5 +1,5 @@
 import React from 'react';
-import { firebase } from '../firebase';
+import firebase from '../firebase';
 
 
 
@@ -14,8 +14,8 @@ export const Checkbox = ({ id }) => {
             });
     }
     return (
-        <div 
-            className="checkbox-holder" 
+        <div
+            className="checkbox-holder"
             data-testid="checkbox-action"
             onClick={() => archiveTask()}
         >
@@ -23,3 +23,4 @@ export const Checkbox = ({ id }) => {
         </div>
     )
 }
+
