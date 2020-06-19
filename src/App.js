@@ -42,7 +42,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <CustomNavbar />
+          {/* <CustomNavbar /> */}
           <div className="">
             <style>{'body { background-color: #edd7cc; }'}</style>
             < Route path="/" exact={true} component={Landing} />
