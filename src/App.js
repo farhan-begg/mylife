@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Landing from "./components/Landing"
 import CustomNavbar from "./components/CustomNavbar"
+// import ParticlesNavbar from "./components/ParticlesNavbar.html"
 import { auth, addUserDocument } from './firebase'
 import Register from './components/Register';
 import Login from './components/Login';
