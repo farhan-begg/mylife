@@ -44,10 +44,10 @@ class App extends Component {
         <div className="App">
           {/* <CustomNavbar /> */}
           <div className="">
-            <style>{'body { background-color: #edd7cc; }'}</style>
+            {/* <style>{'body { background-color: #edd7cc; }'}</style> */}
             < Route path="/" exact={true} component={Landing} />
           </div>
-          < Route path="/" exact={true} component={About} />
+          {/* < Route path="/" exact={true} component={About} /> */}
           < Route path="/register" exact={true} component={Register} />
           < Route path="/login" exact={true} component={Login} />
           < Route path='/todolist' exact={true} component={Todolist} />

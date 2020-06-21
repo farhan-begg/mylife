@@ -1,4 +1,4 @@
-.Logo {
+/* .Logo {
     height: 280px;
     width: 280px;
     background-color:#113d6a;
@@ -11,11 +11,3 @@
 
     /* transform: rotate(180deg); */
 
-}@keyframes rotate {
-    0% {
-        transform: perspective(5000px) rotateY(0deg);
-    }
-    100% {
-        transform: perspective(5000px) rotateY(360deg)
-    }
-}

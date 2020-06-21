@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Header } from './layout/Header';
-import { Content } from './layout/Content'
+import { Content } from './layout/Content';
+import { ProjectsProvider, SelectedProjectProvider } from '../context';
 
-function Todolist() {
+
+export const Todolist = ({ darkModeDefault = false }) => {
+    const [darkMode, setDarkMode] = useState(darkModeDefault);
+
     return (
-        <div className='Todolist'>
-            <Header />
-            <Content />
-        </div>
-    
-    )
-}
- 
+        <SelectedProjectProvider>
+            <ProjectsProvider>
+                <main
+                    data-testid="application"
+                    className={darkMode ? 'darkmode' : undefined}
+                >
+                    <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+                    <Content />
+                </main>
+            </ProjectsProvider>
+        </SelectedProjectProvider>
+    );
+};
+
+Todolist.propTypes = {
+    darkModeDefault: PropTypes.bool,
+};
+
 export default Todolist;
+
+
+
