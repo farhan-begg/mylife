@@ -7,6 +7,7 @@ import Register from './components/authentication/Register';
 import Login from './components/authentication/Login';
 import Todolist from './components/Todolist';
 import Footer from './components/Footer';
+import Navbar from '/components/Navbar';
 
 
 
