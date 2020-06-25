@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { auth, provider, addUserDocument } from '../firebase'
+import { auth, provider, addUserDocument } from '../../firebase'
 
 
 class Register extends Component {

@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Landing from "./components/Landing"
-import CustomNavbar from "./components/CustomNavbar"
-// import ParticlesNavbar from "./components/ParticlesNavbar.html"
 import { auth, addUserDocument } from './firebase'
-import Register from './components/Register';
-import Login from './components/Login';
-import About from './components/About';
+import Register from './components/authentication/Register';
+import Login from './components/authentication/Login';
 import Todolist from './components/Todolist';
+import Footer from './components/Footer';
+
 
 
 
@@ -38,15 +37,20 @@ class App extends Component {
   }
 
 
+
+
+
   render() {
+
 
     return (
       <Router>
         <div className="App">
-          {/* <CustomNavbar /> */}
+
           <div className="">
             {/* <style>{'body { background-color: #edd7cc; }'}</style> */}
             < Route path="/" exact={true} component={Landing} />
+            < Route path="/" exact={true} component={Footer} />
           </div>
           {/* < Route path="/" exact={true} component={About} /> */}
           < Route path="/register" exact={true} component={Register} />
@@ -54,6 +58,9 @@ class App extends Component {
           < Route path='/todolist' exact={true} component={Todolist} />
         </div>
       </Router >
+
+
+
 
     );
   }
