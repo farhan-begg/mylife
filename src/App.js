@@ -7,7 +7,7 @@ import Register from './components/authentication/Register';
 import Login from './components/authentication/Login';
 import Todolist from './components/Todolist';
 import Footer from './components/Footer';
-
+import Customnavbar from './components/navbar/Navbar'
 
 
 
@@ -46,16 +46,20 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <Customnavbar />
 
           <div className="">
             {/* <style>{'body { background-color: #edd7cc; }'}</style> */}
             < Route path="/" exact={true} component={Landing} />
+
             < Route path="/" exact={true} component={Footer} />
           </div>
           {/* < Route path="/" exact={true} component={About} /> */}
           < Route path="/register" exact={true} component={Register} />
           < Route path="/login" exact={true} component={Login} />
           < Route path='/todolist' exact={true} component={Todolist} />
+
+
         </div>
       </Router >
 

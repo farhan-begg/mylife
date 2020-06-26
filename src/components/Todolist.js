@@ -15,7 +15,6 @@ export const Todolist = ({ darkModeDefault = false }) => {
                     data-testid="application"
                     className={darkMode ? 'darkmode' : undefined}
                 >
-                    <Header darkMode={darkMode} setDarkMode={setDarkMode} />
                     <Content />
                 </main>
             </ProjectsProvider>
