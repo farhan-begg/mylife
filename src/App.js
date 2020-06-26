@@ -7,6 +7,8 @@ import Register from './components/authentication/Register';
 import Login from './components/authentication/Login';
 import Todolist from './components/Todolist';
 import Footer from './components/Footer';
+import ProgressBar from './components/progressbar/Progressbar'
+
 
 
 
@@ -56,6 +58,7 @@ class App extends Component {
           < Route path="/register" exact={true} component={Register} />
           < Route path="/login" exact={true} component={Login} />
           < Route path='/todolist' exact={true} component={Todolist} />
+          < Route path='/habit' exact={true} component={ProgressBar} />
         </div>
       </Router >
 
