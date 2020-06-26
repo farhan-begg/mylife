@@ -7,8 +7,7 @@ import Register from './components/authentication/Register';
 import Login from './components/authentication/Login';
 import Todolist from './components/Todolist';
 import Footer from './components/Footer';
-import Navbar from '/components/Navbar';
-
+import CustomNavbar from './components/CustomNavbar';
 
 
 
@@ -47,7 +46,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-
+          <CustomNavbar/>
           <div className="">
             {/* <style>{'body { background-color: #edd7cc; }'}</style> */}
             < Route path="/" exact={true} component={Landing} />
