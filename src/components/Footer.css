@@ -3,16 +3,11 @@
 
 .three-cards{
     position: relative;
-    height: 1px;
-    background-color:black;
+	height: 500px;
+    background: linear-gradient(to bottom, #ff0066 17%, #003300 88%);
+
     bottom: -500px;
     
-
-}
-
-body {
-	font-family: 'Roboto', sans-serif;
-    background: black;
 
 }
 
@@ -150,4 +145,5 @@ body {
 				-webkit-transform: rotate(359deg);
 		}
 }
+
 
