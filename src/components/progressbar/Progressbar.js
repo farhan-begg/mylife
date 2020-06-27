@@ -41,9 +41,22 @@ class ProgressBar extends Component {
                 <input id="percent" name="percent"></input>
                 <label for="percent">Type a percent!</label>
 
+<<<<<<< HEAD
             </div >
 
 
+=======
+
+
+            </div >
+
+
+
+
+
+
+
+>>>>>>> fb-dev
         );
     }
 }

@@ -7,10 +7,14 @@ const Footer = () => {
 
 
 
-        <div className="three-cards">
-            <div className="big-box">
-                <div className="conatiner">
+        <div className="big-box">
+
+            <div className="conatiner">
+
+                <div className="three-cards">
+
                     <div className="wrap">
+
                         <div className="box one">
                             <h1>My Life</h1>
                             <div className="poster p1">
@@ -32,6 +36,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+
                     <hr></hr>
                     <footer align="center">
                         &copy;{new Date().getFullYear()} My Life Inc | All rights reserved | Terms of Service | Privacy
