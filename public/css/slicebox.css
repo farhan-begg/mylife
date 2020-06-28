@@ -1,4 +1,13 @@
 /* Slicebox Style */
+
+
+.title{
+	position: relative;
+	top: 700px;
+
+}
+
+
 .sb-slider {
 	margin-top: 200px;
 	position: relative;

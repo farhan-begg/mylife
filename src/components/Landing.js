@@ -9,7 +9,8 @@ export default function Landing() {
   const sbSlider = useRef(null)
   return (
 		<div className="container"> 
-			<h1>My Lyfe <span>Time To Level Up</span></h1>
+
+			<h1 className="title">My Lyfe <span>Time To Level Up</span></h1>
 			<div ref={wrapper} className="wrapper">
 
 				<ul ref={sbSlider} id="sb-slider" className="sb-slider">

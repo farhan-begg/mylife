@@ -7,13 +7,10 @@ import Register from './components/authentication/Register';
 import Login from './components/authentication/Login';
 import Todolist from './components/Todolist';
 import Footer from './components/Footer';
-<<<<<<< HEAD
 import Customnavbar from './components/navbar/Navbar'
-=======
 import ProgressBar from './components/progressbar/Progressbar'
 
 
->>>>>>> fb-dev
 
 
 
@@ -64,12 +61,9 @@ class App extends Component {
           < Route path="/register" exact={true} component={Register} />
           < Route path="/login" exact={true} component={Login} />
           < Route path='/todolist' exact={true} component={Todolist} />
-<<<<<<< HEAD
 
 
-=======
           < Route path='/habit' exact={true} component={ProgressBar} />
->>>>>>> fb-dev
         </div>
       </Router >
 
