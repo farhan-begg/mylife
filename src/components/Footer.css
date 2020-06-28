@@ -4,7 +4,6 @@
 .three-cards{
     position: relative;
 	height: 500px;
-    background: linear-gradient(to bottom, #ff0066 17%, #003300 88%);
 
     bottom: -500px;
     
