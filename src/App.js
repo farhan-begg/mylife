@@ -8,12 +8,12 @@ import Login from './components/authentication/Login';
 import Todolist from './components/Todolist';
 import Card from './components/Card';
 import ProgressBar from './components/progressbar/Progressbar'
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 import SignIn from './components/authentication/SignIn';
 import Socmed from './components/socialmedia/Socmed'
 import Appa from './login/Appa'
 
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import CustomNavbar from './components/CustomNavbar';
 
 
