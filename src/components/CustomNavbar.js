@@ -25,7 +25,7 @@ function CustomNavbar() {
 function Navbar(props) {
     return (
         <nav className='navbar'>
-            <ul className='navbar-nav'> { props.children }</ul>
+            <ul className='navbar-nav-1'> { props.children }</ul>
         </nav>
     );
 }
@@ -36,7 +36,7 @@ function NavItem(props) {
     
     return (
         <li className='nav-item'>
-            <a href='#' className='icon-button' onClick={() => setOpen(!open)}>
+            <a href='/register' className='icon-button' onClick={() => setOpen(!open)}>
                 {props.icon}
             </a>
 
