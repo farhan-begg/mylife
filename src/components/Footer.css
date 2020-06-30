@@ -1,9 +1,9 @@
 .main-footer{
     background: black;
-    opacity: .9;
+    opacity: .5;
     color: white;
     
-    padding: 30px;
+    padding-top: 30px;
     position: relative;
     bottom: -600px;
     width: 100%;

@@ -22,18 +22,24 @@ function Footer() {
                             </ul>
                         </div>
                         {/* Column 2 */}
-                        <div ClassName="mid-col">
-                            <p>About US</p>
+                        <div ClassName="left-col">
+                            <p>Contact US</p>
                             <ul className='list-unstyled'>
+                                <li>Lorem Ipsum</li>
+                                <li>Lorem Ipsum</li>
+                                <li> Lorem Ipsum</li>
                                 <li>Lorem Ipsum</li>
                                 <li>Lorem Ipsum</li>
                                 <li> Lorem Ipsum</li>
                             </ul>
                         </div>
                         {/* Column 3 */}
-                        <div ClassName="mid-col">
-                            <p>About US</p>
+                        <div ClassName="left-col">
+                            <p>Contact US</p>
                             <ul className='list-unstyled'>
+                                <li>Lorem Ipsum</li>
+                                <li>Lorem Ipsum</li>
+                                <li> Lorem Ipsum</li>
                                 <li>Lorem Ipsum</li>
                                 <li>Lorem Ipsum</li>
                                 <li> Lorem Ipsum</li>
