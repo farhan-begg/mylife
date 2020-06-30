@@ -10,7 +10,7 @@ function Landing() {
       <div>
         <div>
           <header className="header-1" >
-            <img src={`${process.env.PUBLIC_URL}images/LandingImage.jpg`} alt="Logo" className="image" />
+            <img src={`${process.env.PUBLIC_URL}images/LandingAlt.jpg`} alt="Logo" className="image" />
             <div className="logo-box">
               {/* <img src={`${process.env.PUBLIC_URL}images/Logo.png`} alt="Logo" className="logo" /> */}
               

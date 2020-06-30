@@ -1,7 +1,7 @@
 :root {
-    --bg:  #242526;
-    --bg-accent: #484a4d;
-    --text-color: #dadce1;
+    --bg:  rgba(253, 250, 250, 0.397);
+    --bg-accent: #4d4a48;
+    --text-color: #fafbfc;
     --nav-size: 60px;
     --border: 1px solid #474a4d;
     --border-radius: 8px;
@@ -51,7 +51,7 @@ justify-content: center;
     --button-size: calc(var(--nav-size) * 0.5);
     width: var(--button-size);
     height: var(--button-size);
-    background-color: #484a4d;
+    background-color: #b9b9b9;
     border-radius: 50%;
     padding: 5px;
     margin: 2px;
