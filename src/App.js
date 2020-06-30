@@ -56,7 +56,7 @@ class App extends Component {
 
             < Route path="/" exact={true} component={Card} />
             < Route path="/" exact={true} component={Footer} />
-            < Route path="/" exact={true} component={Socmed} />
+            {/* < Route path="/" exact={true} component={Socmed} /> */}
             {/* < Route path="/" exact={true} component={App} /> */}
 
 
