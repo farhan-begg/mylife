@@ -1,50 +1,61 @@
 import React from 'react';
 import './Footer.css'
 
-const Footer = () => {
+
+
+function Footer() {
     return (
-
-
-
-
-        <div className="big-box">
-
-            <div className="conatiner">
-
-                <div className="three-cards">
-
-                    <div className="wrap">
-
-                        <div className="box one">
-                            <h1>My Life</h1>
-                            <div className="poster p1">
-                                <h4>A</h4>
-                            </div>
+        <div className="page-container">
+            <div className="conent-wrap">
+                <div className='main-footer'>
+                    <div className="container-1">
+                        {/* Column 1 */}
+                        <div ClassName="left-col">
+                            <p>Contact US</p>
+                            <ul className='list-unstyled'>
+                                <li>Lorem Ipsum</li>
+                                <li>Lorem Ipsum</li>
+                                <li> Lorem Ipsum</li>
+                                <li>Lorem Ipsum</li>
+                                <li>Lorem Ipsum</li>
+                                <li> Lorem Ipsum</li>
+                            </ul>
                         </div>
-                        <div className="box two">
-                            <h1>Habit</h1>
-                            <div className="poster p2">
-                                <h4>F</h4>
-                            </div>
+                        {/* Column 2 */}
+                        <div ClassName="mid-col">
+                            <p>About US</p>
+                            <ul className='list-unstyled'>
+                                <li>Lorem Ipsum</li>
+                                <li>Lorem Ipsum</li>
+                                <li> Lorem Ipsum</li>
+                            </ul>
                         </div>
-                        <div className="box three">
-                            <h1>
-                                Your List
-                    </h1>
-                            <div className="poster p3">
-                                <h4>S</h4>
-                            </div>
+                        {/* Column 3 */}
+                        <div ClassName="mid-col">
+                            <p>About US</p>
+                            <ul className='list-unstyled'>
+                                <li>Lorem Ipsum</li>
+                                <li>Lorem Ipsum</li>
+                                <li> Lorem Ipsum</li>
+                            </ul>
                         </div>
+
+
+
+                        <hr></hr>
+
                     </div>
-
-                    <hr></hr>
                     <footer align="center">
                         &copy;{new Date().getFullYear()} My Life Inc | All rights reserved | Terms of Service | Privacy
-            </footer>
+                 </footer>
+
+
                 </div>
             </div>
         </div>
-    )
+
+
+    );
 }
 
 export default Footer;

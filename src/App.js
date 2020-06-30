@@ -6,10 +6,13 @@ import { auth, addUserDocument } from './firebase'
 import Register from './components/authentication/Register';
 import Login from './components/authentication/Login';
 import Todolist from './components/Todolist';
-import Footer from './components/Footer';
+import Card from './components/Card';
 import Customnavbar from './components/navbar/Navbar'
 import ProgressBar from './components/progressbar/Progressbar'
-
+import Footer from './components/Footer'
+import SignIn from './components/authentication/SignIn';
+import Socmed from './components/socialmedia/Socmed'
+import Appa from './login/Appa'
 
 
 
@@ -39,10 +42,6 @@ class App extends Component {
     this.unsubsribe();
   }
 
-
-
-
-
   render() {
 
 
@@ -55,11 +54,18 @@ class App extends Component {
             {/* <style>{'body { background-color: #edd7cc; }'}</style> */}
             < Route path="/" exact={true} component={Landing} />
 
+            < Route path="/" exact={true} component={Card} />
             < Route path="/" exact={true} component={Footer} />
+            < Route path="/" exact={true} component={Socmed} />
+            {/* < Route path="/" exact={true} component={App} /> */}
+
+
+
+
           </div>
           {/* < Route path="/" exact={true} component={About} /> */}
           < Route path="/register" exact={true} component={Register} />
-          < Route path="/login" exact={true} component={Login} />
+          < Route path="/login" exact={true} component={Appa} />
           < Route path='/todolist' exact={true} component={Todolist} />
 
 
