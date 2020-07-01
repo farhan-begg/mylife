@@ -19,7 +19,8 @@ p {
 
 .container-1{
     display: flex; 
-    justify-content: space-evenly
+	justify-content: space-evenly
+	
 
 }
 
@@ -48,7 +49,15 @@ footer {
 
 
 .socialbtns{
-    font-size: 40px;
+	font-size: 40px;
+	display: flex; 
+	justify-content: space-around;
+	padding-top:450px ;
+	padding-left: 1500px;
+	
+
+	
+
 }
 a, a:hover {
 	color: #000;
@@ -57,18 +66,21 @@ a, a:hover {
 }
 
 .socialbtnsbtnsbtns, .socialbtnsbtnsbtns ul, .socialbtnsbtnsbtns li {
+	padding: 10px;
 
 }
 
 .socialbtnsbtnsbtns li {
     list-style: none outside none;
-    display: inline-block;
+	display: inline-block;
+	padding: 40px;
   
 }
 
 .socialbtns li {
     list-style: none outside none;
-    display: inline-block;
+	display: inline-block;
+
 }
 
 .socialbtns .fa {
@@ -93,6 +105,7 @@ a, a:hover {
 	-moz-transition: all ease-out 0.5s;
 	-webkit-transition: all ease-out 0.5s;
 	-o-transition: all ease-out 0.5s;
+	padding: 15px
 }
 
 .socialbtns .fa:hover {
