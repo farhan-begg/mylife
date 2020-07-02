@@ -148,3 +148,7 @@ justify-content: center;
     transform: translateX(110%);
     transition: all var(--speed) ease;
 }
+
+button  {
+    background-color: red;
+}

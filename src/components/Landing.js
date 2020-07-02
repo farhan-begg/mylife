@@ -3,6 +3,7 @@ import React from 'react';
 // import { Navbar, Jumbotron, Nav, Container } from 'react-bootstrap';
 import './Landing.css';
 import firebase from "../firebase";
+import About from './About'
 
 
 function Landing() {
@@ -11,10 +12,7 @@ function Landing() {
     <div>
       <div>
         <header className="header-1" >
-          {/* <img src={`${process.env.PUBLIC_URL}images/LandingImage.jpg`} alt="Logo" className="image" /> */}
           <div className="logo-box">
-            {/* <img src={`${process.env.PUBLIC_URL}images/Logo.png`} alt="Logo" className="logo" /> */}
-
           </div>
           <div className="text-box">
             <h1 className="heading-primary">

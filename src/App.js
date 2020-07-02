@@ -6,7 +6,7 @@ import Todolist from './components/Todolist';
 import Card from './components/Card';
 import ProgressBar from './components/progressbar/Progressbar'
 import Footer from './components/Footer';
-
+import About from './components/About'
 import Appa from './login/Appa'
 
 import { AuthProvider } from "./login/Auth";
@@ -25,6 +25,7 @@ class App extends Component {
             <CustomNavbar />
             <style>{'body { background-color: #9EB192 ; }'}</style>
             <Route path="/" exact={true} component={Landing} />
+            <Route path="/" exact={true} component={About} />
             <Route path="/" exact={true} component={Card} />
             <Route path="/" exact={true} component={Footer} />
             < Route path="/register" exact={true} component={Appa} />

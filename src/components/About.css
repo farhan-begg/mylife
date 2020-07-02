@@ -1,0 +1,21 @@
+.card-about {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.274);
+    transition: 0.3s;
+    width: 30%;
+    position: relative;
+  }
+  
+  .card-about:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.678);
+  }
+  
+  .container-card {
+    padding: 2px 16px;
+  }
+  
+ .card-image {
+    max-width: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
