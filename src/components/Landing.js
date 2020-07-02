@@ -11,7 +11,7 @@ function Landing() {
     <div>
       <div>
         <header className="header-1" >
-          <img src={`${process.env.PUBLIC_URL}images/LandingImage.jpg`} alt="Logo" className="image" />
+          {/* <img src={`${process.env.PUBLIC_URL}images/LandingImage.jpg`} alt="Logo" className="image" /> */}
           <div className="logo-box">
             {/* <img src={`${process.env.PUBLIC_URL}images/Logo.png`} alt="Logo" className="logo" /> */}
 
@@ -21,7 +21,7 @@ function Landing() {
               <span className="heading-primary-main">myLyfe</span>
               <span className="heading-primary-sub">Time To Level Up</span>
             </h1>
-            <a href="" className="btn btn-white btn-animated">Start Your Journey</a>
+            <a href="/register" className="btn btn-white btn-animated">Start Your Journey</a>
           </div>
         </header>
       </div>

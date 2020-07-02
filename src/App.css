@@ -31,15 +31,6 @@ ul {
 
 /* Mixins
   ============================================ */
-/* Darkmode
-  ============================================ */
-.darkmode header {
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
-  background-color: #282828;
-  border-color: transparent;
-}
-
 /* Header
   ============================================ */
 header {
@@ -217,10 +208,9 @@ header {
 }
 .project-delete-modal__inner {
   z-index: 99;
-  width: 200px;
   padding: 10px;
-  top: 10px;
-  right: 0;
+  margin: auto;
+  width: 50%;
   background-color: white;
 }
 .project-delete-modal__inner p {
