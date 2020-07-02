@@ -6,6 +6,7 @@ import { ReactComponent as CaretIcon } from './icons/caret.svg';
 import { ReactComponent as CogIcon } from './icons/cog.svg';
 import { ReactComponent as ChevronIcon } from './icons/chevron.svg';
 import { ReactComponent as ArrowIcon } from './icons/arrow.svg';
+import firebase from "../firebase";
 
 import { CSSTransition } from 'react-transition-group';
 
@@ -14,7 +15,7 @@ function CustomNavbar() {
         <Navbar>
             <NavItem icon={<PlusIcon />} />
             <NavItem icon= {<NoteIcon />} />
-    
+            <button onClick={() => firebase.auth().signOut()}>Sign out</button>
             <NavItem icon= {<CaretIcon />}>
               <DropdownMenu></DropdownMenu>
             </NavItem>

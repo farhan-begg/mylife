@@ -23,6 +23,7 @@ class App extends Component {
         <Router>
           <div className="App">
             <CustomNavbar />
+            <style>{'body { background-color: #9EB192 ; }'}</style>
             <Route path="/" exact={true} component={Landing} />
             <Route path="/" exact={true} component={Card} />
             <Route path="/" exact={true} component={Footer} />

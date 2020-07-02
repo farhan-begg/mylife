@@ -18,7 +18,7 @@
 
 .header-1 {
     height: 80vh;
-    background-image: linear-gradient(98deg, rgba(172,60,97,1) 15%, rgba(18,59,104,1) 100%), url("https://www.guidetocbd.org/wp-content/uploads/2020/02/head-1-scaled.jpg");
+    background-image: linear-gradient(60deg, rgba(255, 242, 67, 0.589) 5%, rgb(136, 204, 221) 100%), url("https://unsplash.com/photos/xP_AGmeEa6s");
     background-size: contain;
     background-position: center;
     position: relative;
@@ -189,7 +189,7 @@
 
 
 .btn-white::after {
-    background-color: #8f99a5;
+    background-color: #f1e75db6;
     
 }
 
