@@ -15,9 +15,8 @@
     /* color:#777; */
     /* padding: 30px; */ 
 
-
 .header-1 {
-    height: 80vh;
+    height: 100vh;
     background-image: linear-gradient(to right bottom, rgba(255, 242, 67, 0.589) 5%, rgb(136, 204, 221) 100%), url("https://miro.medium.com/max/3172/1*LIJf-T5WXGsUVC7d4Ji8nA.jpeg");
     background-size: cover;
     background-position: center;
