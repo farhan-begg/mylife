@@ -52,7 +52,7 @@ class App extends Component {
           <CustomNavbar />
 
           <div className="">
-            {/* <style>{'body { background-color: #edd7cc; }'}</style> */}
+            <style>{'body { background-color: #9EB192 ; }'}</style>
             < Route path="/" exact={true} component={Landing} />
 
             < Route path="/" exact={true} component={Card} />
