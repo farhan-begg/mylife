@@ -14,7 +14,7 @@ function CustomNavbar() {
         <Navbar>
             <NavItem icon={<PlusIcon />} />
             <NavItem icon= {<NoteIcon />} />
-    
+            <NavItem icon= {<NoteIcon />} />
             {/* <NavItem icon= {<CaretIcon />}>
               <DropdownMenu></DropdownMenu>
             </NavItem> */}
@@ -36,7 +36,7 @@ function NavItem(props) {
     
     return (
         <li className='nav-item'>
-            <a href='' className='icon-button' onClick={() => setOpen(!open)}>
+            <a href='/login' className='icon-button' onClick={() => setOpen(!open)}>
                 {props.icon}
             </a>
 

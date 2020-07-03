@@ -40,7 +40,7 @@ text-decoration: none;;
 
 /* <li> */
 .nav-item {
-width: calc(var(--nav-size) * 0.8);
+width: calc(var(--nav-size) * 0.9);
 display: flex;
 align-items: center;
 justify-content: center;
@@ -48,7 +48,7 @@ justify-content: center;
 
 /* Icon Button */
 .icon-button {
-    --button-size: calc(var(--nav-size) * 0.5);
+    --button-size: calc(var(--nav-size) * 0.7);
     width: var(--button-size);
     height: var(--button-size);
     background-color: #b9b9b9;
@@ -67,8 +67,8 @@ justify-content: center;
 
 .icon-button svg { 
     fill: var(--text-color);
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
 
 /* Dropdown Menu */
