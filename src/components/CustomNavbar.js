@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import "./CustomNavbar.css"
 import { ReactComponent as PlusIcon } from './icons/plus.svg';
 import { ReactComponent as NoteIcon } from './icons/note.svg';
+import { ReactComponent as AvatarIcon } from './icons/avatar.svg';
+import { ReactComponent as TrackerIcon } from './icons/tracker.svg';
 import { ReactComponent as CaretIcon } from './icons/caret.svg';
 import { ReactComponent as CogIcon } from './icons/cog.svg';
 import { ReactComponent as ChevronIcon } from './icons/chevron.svg';
@@ -12,9 +14,10 @@ import { CSSTransition } from 'react-transition-group';
 function CustomNavbar() {
     return (
         <Navbar>
-            <NavItem icon={<PlusIcon />} />
+            <NavItem icon={<AvatarIcon />} />
+            {/* <NavItem icon= {<PlusIcon />} /> */}
             <NavItem icon= {<NoteIcon />} />
-            <NavItem icon= {<NoteIcon />} />
+            <NavItem icon= {<TrackerIcon />} />
             {/* <NavItem icon= {<CaretIcon />}>
               <DropdownMenu></DropdownMenu>
             </NavItem> */}
