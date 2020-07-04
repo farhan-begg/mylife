@@ -22,7 +22,7 @@ text-decoration: none;;
 /* Top Navigation Bar */
 
 /* <nav> */
-.navbar {
+.navbar-1 {
     height: var(--nav-size);
     background-color: var(--bg);
     padding: 0 1rem;
@@ -39,7 +39,7 @@ text-decoration: none;;
 }
 
 /* <li> */
-.nav-item {
+.nav-item-6 {
 width: calc(var(--nav-size) * 0.8);
 display: flex;
 align-items: center;
@@ -47,7 +47,7 @@ justify-content: center;
 }
 
 /* Icon Button */
-.icon-button {
+.icon-button-6 {
     --button-size: calc(var(--nav-size) * 0.5);
     width: var(--button-size);
     height: var(--button-size);
@@ -61,11 +61,11 @@ justify-content: center;
     transition: filter 300ms;
 }
 
-.icon-button:hover {
+.icon-button-6:hover {
     filter: brightness(1.2);
 }
 
-.icon-button svg { 
+.icon-button-6 svg { 
     fill: var(--text-color);
     width: 20px;
     height: 20px;
@@ -73,7 +73,7 @@ justify-content: center;
 
 /* Dropdown Menu */
 
-.dropdown {
+.dropdown-6 {
     position: absolute;
     top: 58px;
     width: 300px;
@@ -86,11 +86,11 @@ justify-content: center;
     transition: height var(--speed) ease;
 }
 
-.menu {
+.menu-6 {
     width: 100%;
 }
 
-.menu-item {
+.menu-item-6 {
     height: 50px;
     display: flex;
     align-items: center;
@@ -99,20 +99,20 @@ justify-content: center;
     padding: 0.5rem;
 }
 
-.menu-item .icon-button {
+.menu-item-6 .icon-button {
     margin-right: 0.5rem;
 }
 
 
-.menu-item .icon-button:hover {
+.menu-item-6 .icon-button:hover {
     filter: none;
 }
 
-.menu-item:hover {
+.menu-item-6:hover {
     background-color: #525357;
 }
 
-.icon-right {
+.icon-right-6 {
     margin-left: auto;
 }
 
@@ -142,6 +142,7 @@ justify-content: center;
     transition: all var(--speed) ease;
 }
 .menu-secondary-exit {
+    
 
 }
 .menu-secondary-exit-active {

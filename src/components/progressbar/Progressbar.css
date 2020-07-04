@@ -1,48 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,100);
+body {
+  background: #333;
+  font-family: 'Lato', sans-serif;
+}
 
-#svg circle {
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 1s linear;
-  stroke: #666;
-  stroke-width: 1em;
+#app {
+  margin-top: 50px;
+  color: #fff;
 }
-#svg #bar {
-  stroke: #FF9F1E;
+
+input[type="text"], input[type="number"] {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 20px;
 }
-#cont {
-  display: block;
-  height: 200px;
-  width: 200px;
-  margin: 2em auto;
-  box-shadow: 0 0 1em black;
-  border-radius: 100%;
-  position: relative;
+
+input[type="number"] {
+  width: 130px;
+  margin-bottom: 30px;
 }
-#cont:after {
+
+#creator, #progress {
+  border: 0;
+  border-radius: 0;
+  background: #00897b;
+  outline: none;
+  color: #fff;
+  transition: background .15s ease;
+}
+#creator:hover, #progress:hover {
+  background: #007064;
+}
+
+#progress {
   position: absolute;
-  display: block;
-  height: 160px;
-  width: 160px;
-  left: 50%;
-  top: 50%;
-  box-shadow: inset 0 0 1em black;
-  content: attr(data-pct)"%";
-  margin-top: -80px;
-  margin-left: -80px;
-  border-radius: 100%;
-  line-height: 160px;
-  font-size:2em;
-  text-shadow: 0 0 0.5em black;
-  text-align: center;
+  bottom: 22px;
+  right: 22px;
+  border-radius: 50%;
+  margin: 13px 0 0 0;
+  padding: 0 14px;
+  cursor: pointer;
 }
 
-input {
-  color: #000;
+.lower div {
+  float: left;
+  font-size: 1.4em;
+  margin: 18px 0 0 3px;
+}
+.lower span {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #444;
+  transition: color .2s ease;
+}
+.lower span:hover {
+  color: #333;
 }
 
+.habit {
+  margin-top: 20px;
+}
 
-/* Make things perty */
-html {  height: 100%;}
-body { font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;  background-color: #0d0d0d; color: #fff; height: 100%; padding-top: 2em; text-align: center;}
-h1, h2{ margin: 0; text-transform: uppercase;}
-h2 { font-weight: 300}
-input { border: 1px solid #666; background: #333; color: #000; padding: 0.5em; box-shadow: none; outline: none !important; margin: 1em  auto; text-align: center;}
+.columns {
+  position: relative;
+  margin: 20px 20px 0 0;
+  background: #555;
+  padding: 35px;
+  min-width: 300px;
+}
+.columns h4 {
+  margin-bottom: 12;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shell {
+  height: 20px;
+  width: 230px;
+  border-radius: 13px;
+  background: linear-gradient(to right, #9658b5, #e3505a);
+  overflow: hidden;
+}
+
+.bar {
+  background: #333;
+  height: 20px;
+  float: right;
+}
+
+.slide-transition {
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+.slide-enter, .slide-leave {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 550px) {
+  .columns {
+    text-align: center;
+  }
+  .columns .shell {
+    margin: 0 auto;
+  }
+}

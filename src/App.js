@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import Appa from './login/Appa'
 
 import { AuthProvider } from "./login/Auth";
-// import PrivateRoute from "./login/PrivateRoute";
+import PrivateRoute from "./login/PrivateRoute";
 
 // import Footer from './components/Footer';
 import CustomNavbar from './components/CustomNavbar';
@@ -28,8 +28,8 @@ class App extends Component {
             <Route path="/" exact={true} component={Footer} />
             < Route path="/register" exact={true} component={Appa} />
             < Route path="/login" exact={true} component={Appa} />
-            < Route path='/todolist' exact={true} component={Todolist} />
-            < Route path='/habit' exact={true} component={ProgressBar} />
+            < PrivateRoute path='/todolist' exact={true} component={Todolist} />
+            < PrivateRoute path='/habit' exact={true} component={ProgressBar} />
           </div>
         </Router >
       </AuthProvider>
