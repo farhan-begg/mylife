@@ -98,8 +98,8 @@ class ProgressBar extends Component {
                     <div id="app">
                         <h1>Habit Tracker</h1>
                         <div>
-                            <input type="text" placeholder="Habit Title" name="newHabit" onChange={this.inputChange} value={this.state.newHabit} /><br />
-                            <input type="number" placeholder="Repetitions" name="reps" onChange={this.inputChange} value={this.state.reps} /><br />
+                            <input type="text" placeholder="Name Your Habit" name="newHabit" onChange={this.inputChange} value={this.state.newHabit} /><br />
+                            <input type="number" placeholder="Amount" name="reps" onChange={this.inputChange} value={this.state.reps} /><br />
                             <button id="creator" onClick={this.addHabit}>Add</button>
                         </div>
                         {this.state.habits.map((habit, i) => {

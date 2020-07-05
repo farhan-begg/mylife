@@ -1,7 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,100);
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
 body {
   background: #333;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto';
+  font-weight: 700;
 }
 
 #app {
@@ -15,9 +16,9 @@ input[type="text"], input[type="number"] {
   border-radius: 0;
   border-bottom: 1px solid #fff;
   color: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto';
   font-size: 1.2em;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
@@ -26,13 +27,17 @@ input[type="number"] {
   margin-bottom: 30px;
 }
 
+input::placeholder {
+  color: white;
+}
+
 #creator, #progress {
   border: 0;
-  border-radius: 0;
+  border-radius: 25px;
   background: purple;
   outline: none;
   color: #fff;
-  transition: background .15s ease;
+  transition: background 0.5s ease;
 }
 #creator:hover, #progress:hover {
   background: #007064;
@@ -40,9 +45,11 @@ input[type="number"] {
 
 #progress {
   position: absolute;
+  width: 40px;
+  height: 40px;
   bottom: 22px;
   right: 22px;
-  border-radius: 50%;
+  border-radius: 25px;
   margin: 13px 0 0 0;
   padding: 0 14px;
   cursor: pointer;
@@ -115,5 +122,26 @@ input[type="number"] {
   }
   .columns .shell {
     margin: 0 auto;
+  }
+  .shell{
+    height: 20px;
+    width: 100px;
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .columns {
+    text-align: left;
+  }
+  .columns .shell {
+    margin: 0;
+  }
+  .shell {
+    height: 20px;
+    width: 400px;
+    border-radius: 13px;
+    background: linear-gradient(to right, #9658b5, #e3505a);
+    overflow: hidden;
   }
 }
