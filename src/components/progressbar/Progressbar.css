@@ -29,7 +29,7 @@ input[type="number"] {
 #creator, #progress {
   border: 0;
   border-radius: 0;
-  background: #00897b;
+  background: purple;
   outline: none;
   color: #fff;
   transition: background .15s ease;
@@ -87,7 +87,7 @@ input[type="number"] {
 
 .shell {
   height: 20px;
-  width: 230px;
+  width: 700px;
   border-radius: 13px;
   background: linear-gradient(to right, #9658b5, #e3505a);
   overflow: hidden;
