@@ -1,11 +1,12 @@
 .main-footer{
-    background: black;
+	background: #bfd8c048;
+	/* rgb(178, 197, 163); */
     opacity: .5;
-    color: white;
+    color: rgb(20, 19, 19);
     
-    padding-top: 30px;
+    padding-top: 10px;
     position: relative;
-    bottom: -600px;
+    bottom: -400px;
     width: 100%;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 
@@ -14,8 +15,9 @@
 
 }
 p {
-    font-size: 30px;
+    font-size: 25px;
 }
+
 
 .container-1{
     display: flex; 
@@ -32,13 +34,13 @@ p {
 
 ul.list-unstyled{
     text-align: center;
-    border-left: 3px solid green;
+    border-left: 3px solid rgb(57, 124, 26);
     padding: 4px;
     font-size: 20px;
 
 }
 footer {
-    padding-top: 200px;
+    padding-top: 250px;
 }
 
 
@@ -48,7 +50,10 @@ footer {
 
 
 .socialbtns{
-    font-size: 40px;
+	font-size: 40px;
+	margin-right: 31%;
+	padding-bottom: 60px;
+
 }
 a, a:hover {
 	color: #000;

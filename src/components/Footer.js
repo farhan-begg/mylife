@@ -9,32 +9,35 @@ function Footer() {
             <div className="conent-wrap">
                 <div className='main-footer'>
                     <div className="container-1">
+                        
                         {/* Column 1 */}
-                        <div ClassName="left-col">
+                        {/* <div ClassName="left-col">
                             <p>Contact US</p>
                             <ul className='list-unstyled'>
+                                <li> About</li>
                                 <li>Lorem Ipsum</li>
                                 <li>Lorem Ipsum</li>
-                                <li> Lorem Ipsum</li>
                                 <li>Lorem Ipsum</li>
                                 <li>Lorem Ipsum</li>
-                                <li> Lorem Ipsum</li>
+                                <li> Lorem Ipsum</li> 
                             </ul>
-                        </div>
+                        </div> */}
                         {/* Column 2 */}
-                        <div ClassName="left-col">
+                        {/* <div ClassName="left-col">
                             <p>Contact US</p>
                             <ul className='list-unstyled'>
-                                <li>Lorem Ipsum</li>
+                                <li>
+                                    <a href='https://github.com/farhan-begg/mylife'>Github</a>
+                                </li>
                                 <li>Lorem Ipsum</li>
                                 <li> Lorem Ipsum</li>
                                 <li>Lorem Ipsum</li>
                                 <li>Lorem Ipsum</li>
                                 <li> Lorem Ipsum</li>
                             </ul>
-                        </div>
+                        </div> */}
                         {/* Column 3 */}
-                        <div ClassName="left-col">
+                        {/* <div ClassName="left-col">
                             <p>Contact US</p>
                             <ul className='list-unstyled'>
                                 <li>Lorem Ipsum</li>
@@ -44,7 +47,7 @@ function Footer() {
                                 <li>Lorem Ipsum</li>
                                 <li> Lorem Ipsum</li>
                             </ul>
-                        </div>
+                        </div> */}
    
 
 
@@ -62,11 +65,11 @@ function Footer() {
             </div>
             <div class="socialbtns">
             <ul>
-                <li><a href="#" class="fa fa-lg fa-facebook"></a></li>
-                <li><a href="#" class="fa fa-lg fa-twitter"></a></li>
-                <li><a href="#" class="fa fa-lg fa-google-plus"></a></li>
-                <li><a href="#" class="fa fa-lg fa-github"></a></li>
-                <li><a href="#" class="fa fa-lg fa-linkedin"></a></li>
+                {/* <li><a href="https://www.facebook.com/" class="fa fa-lg fa-facebook"></a></li>
+                <li><a href="https://twitter.com/explore" class="fa fa-lg fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-lg fa-google-plus"></a></li> */}
+                <li><a href="https://github.com/farhan-begg/mylife" class="fa fa-lg fa-github"></a></li>
+                {/* <li><a href="https://www.linkedin.com/" class="fa fa-lg fa-linkedin"></a></li> */}
             </ul>
         </div>
         </div>

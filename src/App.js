@@ -12,9 +12,11 @@ import Footer from './components/Footer';
 import SignIn from './components/authentication/SignIn';
 import Socmed from './components/socialmedia/Socmed'
 import Appa from './login/Appa'
+// import AboutUs from './components/AboutUs'
 
 // import Footer from './components/Footer';
 import CustomNavbar from './components/CustomNavbar';
+import Customnavbar from './components/navbar/Navbar'
 
 
 
@@ -49,13 +51,15 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <CustomNavbar />
+          {/* <CustomNavbar /> */}
+          <Customnavbar />
 
           <div className="">
             <style>{'body { background-color: #3d964148 ; }'}</style>
             < Route path="/" exact={true} component={Landing} />
 
             < Route path="/" exact={true} component={Card} />
+            {/* < Route path="/" exact={true} component={AboutUs} /> */}
             < Route path="/" exact={true} component={Footer} />
             {/* < Route path="/" exact={true} component={Socmed} /> */}
             {/* < Route path="/" exact={true} component={App} /> */}

@@ -42,8 +42,8 @@ function NavItem(props) {
             <a href='/login' className='icon-button' onClick={() => setOpen(!open)}>
                 {props.icon}
             </a>
-
             {open && props.children}
+            
         </li>
     );
 }
