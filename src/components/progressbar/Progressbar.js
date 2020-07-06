@@ -93,40 +93,45 @@ class ProgressBar extends Component {
 
     render() {
         return (
-            <div className="">
-                <div class="container">
-                    <div id="app">
-                        <h1>Habit Tracker</h1>
-                        <div>
-                            <input type="text" placeholder="Name Your Habit" name="newHabit" onChange={this.inputChange} value={this.state.newHabit} /><br />
-                            <input type="number" placeholder="Amount" name="reps" onChange={this.inputChange} value={this.state.reps} /><br />
-                            <button id="creator" onClick={this.addHabit}>Add</button>
-                        </div>
-                        {this.state.habits.map((habit, i) => {
-                            return (
-                                <div className="four columns">
-                                    <h4> {habit.title}</h4>
-                                    <div className="shell">
-                                        <div className="bar" style={{ width: 100 - habit.complete * (100 / habit.initial) + '%' }}>
-                                        </div>
-                                    </div>
 
-                                    <div className="lower">
-                                        <span onClick={() => { this.removeHabit(i) }} >
-                                            <i class="fa fa-times"></i>
-                                        </span>
-                                        <button id="progress" onClick={() => { this.completeReps(i) }}><i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
-                                    {!habit.finished && <div> {habit.complete}/{habit.initial} times</div>}
-                                    {habit.finished && <div>Complete</div>}
 
+
+
+            <div class="container">
+                <div id="app">
+                    <h1>Habit Tracker</h1>
+
+                    <div>
+                        <input type="text" placeholder="Name Your Habit" name="newHabit" onChange={this.inputChange} value={this.state.newHabit} /><br />
+                        <input type="number" placeholder="Amount" name="reps" onChange={this.inputChange} value={this.state.reps} /><br />
+                        <button id="creator" onClick={this.addHabit}>Add</button>
+                    </div>
+                </div>
+                {this.state.habits.map((habit, i) => {
+                    return (
+                        <div className="four columns">
+                            <h4> {habit.title}</h4>
+                            <div className="shell">
+                                <div className="bar" style={{ width: 100 - habit.complete * (100 / habit.initial) + '%' }}>
                                 </div>
-                            )
-                        })
+                            </div>
 
-                        }
-                        {/* <div class="row habit">
+                            <div className="lower">
+                                <span onClick={() => { this.removeHabit(i) }} >
+                                    <i class="fa fa-times"></i>
+                                </span>
+                                <button id="progress" onClick={() => { this.completeReps(i) }}><i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                            {!habit.finished && <div> {habit.complete}/{habit.initial} times</div>}
+                            {habit.finished && <div>Complete</div>}
+
+                        </div>
+                    )
+                })
+
+                }
+                {/* <div class="row habit">
                             <div v-for="habit in habits" class="four columns" transition="slide" : style="{borderBottom: '5px solid ' + habit.random }">
         <h4>{{ habit.title }}</h4>
                             <div class="shell">
@@ -141,9 +146,9 @@ class ProgressBar extends Component {
           </button>
                         <div v-show="!habit.finished">{{ habit.complete }}/{{ habit.initial }} times</div>
                         <div v-show="habit.finished" transition="slide">Complete!</div> */}
-                    </div>
-                </div >
-            </div >
+            </div>
+
+
 
 
         )

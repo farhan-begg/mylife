@@ -1,21 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
 body {
-  background: #333;
   font-family: 'Roboto';
   font-weight: 700;
+  background: -webkit-linear-gradient(top, orange, #820036) no-repeat;
+  height: 100%;
+}
+
+html {
+  background: -webkit-linear-gradient(top, orange, #820036) no-repeat;
+  height: 100%;
+
 }
 
 #app {
   margin-top: 50px;
-  color: #fff;
+  color: white
+
 }
 
 input[type="text"], input[type="number"] {
   background: transparent;
   border: 0;
   border-radius: 0;
-  border-bottom: 1px solid #fff;
-  color: #fff;
+  border-bottom: 1px solid pink;
+  color: black;
   font-family: 'Roboto';
   font-size: 1.2em;
   font-weight: 400;
@@ -28,7 +36,7 @@ input[type="number"] {
 }
 
 input::placeholder {
-  color: white;
+  color: black
 }
 
 #creator, #progress {
@@ -81,10 +89,16 @@ input::placeholder {
 .columns {
   position: relative;
   margin: 20px 20px 0 0;
-  background: #555;
   padding: 35px;
+  background: linear-gradient(top, transparent, rgba(200, 200, 200, 0.9), transparent );
   min-width: 300px;
+  -webkit-animation: shine 6s ease-in-out infinite;
+
+  background: rgba(50, 50, 50, 0.3);
+  box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.1);
+  -webkit-animation: angle 6s ease-in-out infinite;
 }
+
 .columns h4 {
   margin-bottom: 12;
   white-space: nowrap;
@@ -95,13 +109,23 @@ input::placeholder {
 .shell {
   height: 20px;
   width: 700px;
-  border-radius: 13px;
-  background: linear-gradient(to right, #9658b5, #e3505a);
   overflow: hidden;
+  position: relative;
+  
+  background: linear-gradient(to right, #9658b5, #e3505a);
+  border-radius: 8px;
+
+
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 150px 100px 150px rgba(255, 255, 255, 0.6);
+  -webkit-animation: shimmy 6s ease-in-out infinite;
 }
 
+
 .bar {
-  background: #333;
+  background: white;
+  opacity: .8;
   height: 20px;
   float: right;
 }
@@ -143,5 +167,44 @@ input::placeholder {
     border-radius: 13px;
     background: linear-gradient(to right, #9658b5, #e3505a);
     overflow: hidden;
+  }
+}
+
+.shine {
+  width: 1000px;
+  height: 100px;
+  margin-left: -100px;
+  transform: rotate(30deg);
+  background: -webkit-linear-gradient(top, transparent, rgba(200, 200, 200, 0.1), transparent);
+  position: absolute;
+  -webkit-animation: shine 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes shine {
+  0%,100% {
+    margin-top: -100px;
+  }
+  50% {
+    margin-top: 800px;
+  }
+}
+.shadow {
+  width: 275px;
+  height: 5px;
+  background: rgba(50, 50, 50, 0.1);
+  margin: -15px auto 0 auto;
+  box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.1);
+  -webkit-animation: angle 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes angle {
+  0%,100% {
+    height: 5px;
+  }
+  50% {
+    height: 15px;
+    width: 260px;
+    border-radius: 30% 90% 90% 30%;
+    transform: skew(50deg, -10deg) translateX(13px);
   }
 }

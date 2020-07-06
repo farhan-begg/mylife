@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
-
+import firebase from '../../firebase'
+import './navbar.css'
 function Customnavbar() {
 
 
@@ -13,6 +14,7 @@ function Customnavbar() {
                     <Nav.Link href="/todolist">Todolist</Nav.Link>
                     <Nav.Link href="/habit">Habit Tracker</Nav.Link>
                     <Nav.Link href="/login">Login/Register</Nav.Link>
+                    <button align="right" onClick={() => firebase.auth().signOut()}>Sign out</button>
                 </Nav>
                 <Nav>
                 </Nav>
