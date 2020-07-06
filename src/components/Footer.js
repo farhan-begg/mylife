@@ -9,7 +9,7 @@ function Footer() {
             <div className="conent-wrap">
                 <div className='main-footer'>
                     <div className="container-1">
-                        
+
                         {/* Column 1 */}
                         {/* <div ClassName="left-col">
                             <p>Contact US</p>
@@ -48,7 +48,7 @@ function Footer() {
                                 <li> Lorem Ipsum</li>
                             </ul>
                         </div> */}
-   
+
 
 
 
@@ -64,14 +64,14 @@ function Footer() {
                 </div>
             </div>
             <div class="socialbtns">
-            <ul>
-                {/* <li><a href="https://www.facebook.com/" class="fa fa-lg fa-facebook"></a></li>
+                <ul>
+                    {/* <li><a href="https://www.facebook.com/" class="fa fa-lg fa-facebook"></a></li>
                 <li><a href="https://twitter.com/explore" class="fa fa-lg fa-twitter"></a></li>
                 <li><a href="#" class="fa fa-lg fa-google-plus"></a></li> */}
-                <li><a href="https://github.com/farhan-begg/mylife" class="fa fa-lg fa-github"></a></li>
-                {/* <li><a href="https://www.linkedin.com/" class="fa fa-lg fa-linkedin"></a></li> */}
-            </ul>
-        </div>
+                    <li><a href="https://github.com/farhan-begg/mylife" class="fa fa-lg fa-github"></a></li>
+                    {/* <li><a href="https://www.linkedin.com/" class="fa fa-lg fa-linkedin"></a></li> */}
+                </ul>
+            </div>
         </div>
 
 

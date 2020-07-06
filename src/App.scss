@@ -25,10 +25,10 @@
      -moz-osx-font-smoothing: grayscale;
    }
    
-   ul {
-     margin: 0;
-     padding: 0;
-   }
+  //  ul {
+  //    margin: 0;
+  //    padding: 0;
+  //  }
    
    // Variables
    $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 4px 11px;
@@ -132,16 +132,6 @@
      }
    }
    
-   /* Darkmode
-     ============================================ */
-   .darkmode {
-     header {
-       -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
-       box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
-       background-color: #282828;
-       border-color: transparent;
-     }
-   }
    
    /* Header
      ============================================ */
@@ -162,90 +152,7 @@
        padding: 0 10px;
      }
    
-     nav {
-       display: grid;
-       -webkit-box-align: center;
-           -ms-flex-align: center;
-               align-items: center;
-       grid-template-columns: 1fr 1fr;
-       grid-template-rows: 1fr;
-       grid-column-gap: 0px;
-       grid-row-gap: 0px;
-       max-width: 922px;
-       margin: auto;
-       height: 44px;
-   
-       p, li {
-         color: white;
-       }
-   
-       div {
-         &.logo {
-           padding-left: 0px;
-           grid-area: 1 / 1;
-           height: 45px;
-   
-           img {
-             width: 24px;
-           }
-   
-         }
-   
-         &.settings {
-           grid-area: 1 / 2;
-           text-align: right;
-   
-           ul {
-             float: right;
-           }
-   
-           ul li {
-             @include va;
-   
-             list-style-type: none;
-             cursor: pointer;
-             width: 45px;
-             height: 45px;
-             text-align: center;
-             vertical-align: middle;
-             float: left;
-   
-             &:hover {
-               border-radius: 3px;
-               background-color: rgba(255,255,255,0.2);
-             }
-   
-             &.settings__add {
-               margin-right: 15px;
-               font-size: 30px;
-   
-               button {
-                 @include transparent-button();
-                 color: white;
-                 cursor: pointer;
-               }
-             }
-   
-             &.settings__darkmode {
-               button {
-                 @include transparent-button();
-                 color: white;
-                 cursor: pointer;
-                 display: -webkit-box;
-                 display: -ms-flexbox;
-                 display: flex;
-   
-                 svg {
-                   width: 20px;
-                   height: 20px;
-                 }
-               }
-   
-             }
-           }
-         }
-       }
-     }
+     
    }
    
    /* Sidebar
@@ -423,12 +330,12 @@
      position: relative;
    
      &__inner {
-       @include box-overlay();
+      //  @include box-overlay();
        z-index: 99;
-       width: 200px;
+      //  width: 50px;
        padding: 10px;
-       top: 10px;
-       right: 0;
+       margin: auto;
+       width: 50%;
        background-color: white;
    
        p {
@@ -442,6 +349,7 @@
        button {
          @include btn('50px');
        }
+
        span {
          @include cancel();
          font-weight: normal;

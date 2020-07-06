@@ -16,19 +16,19 @@ function CustomNavbar() {
         <Navbar>
             <NavItem icon={<AvatarIcon />} />
             {/* <NavItem icon= {<PlusIcon />} /> */}
-            <NavItem icon= {<NoteIcon />} />
-            <NavItem icon= {<TrackerIcon />} />
+            <NavItem icon={<NoteIcon />} />
+            <NavItem icon={<TrackerIcon />} />
             {/* <NavItem icon= {<CaretIcon />}>
               <DropdownMenu></DropdownMenu>
             </NavItem> */}
         </Navbar>
-      );
-    }
-    
+    );
+}
+
 function Navbar(props) {
     return (
         <nav className='navbar'>
-            <ul className='navbar-nav-1'> { props.children }</ul>
+            <ul className='navbar-nav-1'> {props.children}</ul>
         </nav>
     );
 }
@@ -36,14 +36,14 @@ function Navbar(props) {
 function NavItem(props) {
 
     const [open, setOpen] = useState(false);
-    
+
     return (
         <li className='nav-item'>
             <a href='/login' className='icon-button' onClick={() => setOpen(!open)}>
                 {props.icon}
             </a>
             {open && props.children}
-            
+
         </li>
     );
 }

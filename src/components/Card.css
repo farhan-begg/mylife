@@ -1,9 +1,7 @@
 .conatiner {
 	width: 100%;
-    height: 50px;
 	position: absolute;
 	display: grid;  
-	bottom: 30px
 
 }
 .wrap {

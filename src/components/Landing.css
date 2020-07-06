@@ -1,39 +1,13 @@
 
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
- */
-
-/* body {
-    font-family: 'Courier New', Courier, monospace;
-    font-family: 'Raleway', monospace;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7;
-    /* color:#777; */
-    /* padding: 30px; */ 
-
-
 .header-1 {
-    height: 80vh;
-    background-image: linear-gradient(60deg, rgba(255, 242, 67, 0.589) 5%, rgb(136, 204, 221) 100%), url("https://unsplash.com/photos/xP_AGmeEa6s");
-    background-size: contain;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, rgba(255, 242, 67, 0.589) 5%, rgb(136, 204, 221) 100%), url("https://miro.medium.com/max/3172/1*LIJf-T5WXGsUVC7d4Ji8nA.jpeg");
+    background-size: cover;
     background-position: center;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%)
 }
-.image {
-    opacity: 0.35;
-    margin: auto;
-	width: 100%;
-	max-height: 950px;
-	height: auto;
-	position: absolute;
 
-    
-}
 
 .logo-box {
     position: absolute;
