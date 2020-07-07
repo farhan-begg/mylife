@@ -24,9 +24,9 @@ export const Register = ({ history }) => {
   return (
     <Form onSubmit={handleSignUp}>
       <div className="base-container">
-        <div className="header">Register</div>
-        <div className="content">
-          <div className="image">
+        <div className="header-99">Register</div>
+        <div className="content-99">
+          <div className="image-99">
             {/* <img src={loginImg} /> */}
           </div>
           <div className="form">

@@ -97,8 +97,14 @@ class ProgressBar extends Component {
 
 
 
+
+
             <div class="container">
                 <div id="app">
+
+
+
+
                     <h1>Habit Tracker</h1>
 
                     <div>
@@ -131,22 +137,9 @@ class ProgressBar extends Component {
                 })
 
                 }
-                {/* <div class="row habit">
-                            <div v-for="habit in habits" class="four columns" transition="slide" : style="{borderBottom: '5px solid ' + habit.random }">
-        <h4>{{ habit.title }}</h4>
-                            <div class="shell">
-                                <div class="bar" : style="{width: 100 - habit.complete * (100 / habit.initial) + '%' }"></div>
-                        </div>
-                        <div class="lower">
-                            <span onClick="removeHabit(habit)">
-                                <i class="fa fa-times"></i>
-                            </span>
-                            <button id="progress" onClick="completeReps(habit)" v-show="!habit.finished" : style="{background: habit.random }">
-            <i class="fa fa-plus"></i>
-          </button>
-                        <div v-show="!habit.finished">{{ habit.complete }}/{{ habit.initial }} times</div>
-                        <div v-show="habit.finished" transition="slide">Complete!</div> */}
+
             </div>
+
 
 
 

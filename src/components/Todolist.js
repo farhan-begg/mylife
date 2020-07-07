@@ -6,14 +6,13 @@ import { ProjectsProvider, SelectedProjectProvider } from '../context';
 
 
 export const Todolist = ({ darkModeDefault = false }) => {
-    const [darkMode, setDarkMode] = useState(darkModeDefault);
 
     return (
         <SelectedProjectProvider>
             <ProjectsProvider>
                 <main
                     data-testid="application"
-                    className={darkMode ? 'darkmode' : undefined}
+
                 >
                     <Content />
                 </main>

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
-import firebase from '../../firebase'
 import './navbar.css'
+import firebase from '../../firebase'
+
+
 function Customnavbar() {
 
 
@@ -10,10 +12,10 @@ function Customnavbar() {
             <Navbar.Brand href="/" style={{ color: 'grey' }}>My Life</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mr-auto">
-                    <Nav.Link href="/todolist">Todolist</Nav.Link>
-                    <Nav.Link href="/habit">Habit Tracker</Nav.Link>
-                    <Nav.Link href="/login">Login/Register</Nav.Link>
+                <Nav className="justify-content-end" style={{ width: "100%" }}>
+                    <Nav.Link href="/todolist" style={{ color: 'grey' }}>Todolist 📝</Nav.Link>
+                    <Nav.Link href="/habit" style={{ color: 'grey' }}>Habit Tracker 📈</Nav.Link>
+                    <Nav.Link href="/login" style={{ color: 'grey' }}>Login/Register 👤</Nav.Link>
                     <button align="right" onClick={() => firebase.auth().signOut()}>Sign out</button>
                 </Nav>
                 <Nav>

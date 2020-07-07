@@ -30,8 +30,8 @@ export const Login = ({ history }) => {
         <form onSubmit={handleLogin}>
 
             <div className="base-container" >
-                <div className="header">Login</div>
-                <div className="content">
+                <div className="header-99">Login</div>
+                <div className="content-99">
                     <div className="form"  >
                         <div className="form-group">
                             <label htmlFor="email">Email Address</label>

@@ -1,20 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
-body {
-  font-family: 'Roboto';
-  font-weight: 700;
-  background: -webkit-linear-gradient(top, orange, #820036) no-repeat;
-  height: 100%;
-}
 
-html {
-  background: -webkit-linear-gradient(top, orange, #820036) no-repeat;
-  height: 100%;
-
-}
 
 #app {
   margin-top: 50px;
-  color: white
+
 
 }
 
@@ -87,8 +76,9 @@ input::placeholder {
 }
 
 .columns {
+
   position: relative;
-  margin: 20px 20px 0 0;
+  margin: 40px 20px 0 0;
   padding: 35px;
   background: linear-gradient(top, transparent, rgba(200, 200, 200, 0.9), transparent );
   min-width: 300px;
@@ -97,6 +87,7 @@ input::placeholder {
   background: rgba(50, 50, 50, 0.3);
   box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.1);
   -webkit-animation: angle 6s ease-in-out infinite;
+  border-radius: 10px;
 }
 
 .columns h4 {
@@ -173,10 +164,8 @@ input::placeholder {
 .shine {
   width: 1000px;
   height: 100px;
-  margin-left: -100px;
-  transform: rotate(30deg);
   background: -webkit-linear-gradient(top, transparent, rgba(200, 200, 200, 0.1), transparent);
-  position: absolute;
+
   -webkit-animation: shine 6s ease-in-out infinite;
 }
 
