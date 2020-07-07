@@ -52,14 +52,14 @@ function Footer() {
 
 
 
-
-                        <hr></hr>
+{/* 
+                        <hr></hr> */}
 
                     </div>
                     <footer align="center">
-                        <div class="socialbtns">
+                        <div className="socialbtns">
                             <ul>
-                                <li><a href="https://github.com/farhan-begg/mylife" class="fa fa-lg fa-github"></a></li>
+                                <li><a href="https://github.com/farhan-begg/mylife" className="fa fa-lg fa-github"></a></li>
                             </ul>
                         </div>
                         &copy;{new Date().getFullYear()} My Life Inc | All rights reserved | Terms of Service | Privacy

@@ -30,13 +30,18 @@ function About() {
                 </div>
                 <div className="card-front">
                     <div className="flip-card-inner">
-                        <div className="flip-card-front-2">
+                        <div className="flip-card-front">
                             <img className="card-image" src="https://avatars2.githubusercontent.com/u/54567793?s=400&u=c841155d7401ee3eeed6632d4570dffdec37acff&v=4" alt="Avatar"/>
                             <div className="container-card">
                                 <h4><b>Farhan Begg</b></h4> 
                                 <p>Architect & Engineer</p> 
                             </div>  
                         </div>
+                        <div className="flip-card-back">
+                            <h1>John Doe</h1> 
+                            <p>Architect & Engineer</p> 
+                            <p>We love that guy</p>
+                        </div>  
                     </div>
                 </div>
             <div className="card-front">

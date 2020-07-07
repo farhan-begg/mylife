@@ -46,7 +46,7 @@ export const Login = ({ history }) => {
                 </div>
                 <div className="footer">
 
-                    <button variant="primary" type="submit">
+                    <button className="submit-button" variant="primary" type="submit">
                         Submit
                     </button>
 

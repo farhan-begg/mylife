@@ -67,12 +67,13 @@
   }
 }
 
-Button
+.submit-button
 {
   font-size: 21px;
   padding: 5px 20px;
   border: 0;
   background-color: #3498db;
+  border-radius: 50px;
   color: #fff;
   border-radius: 3px;
   transition: all 250ms ease-in-out;

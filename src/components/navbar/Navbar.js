@@ -9,6 +9,7 @@ function Customnavbar() {
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="rgba(253, 250, 250, 0.397);" variant="dark">
+            <div className="Logo"></div>
             <Navbar.Brand href="/" style={{ color: 'grey' }}>My Life</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
