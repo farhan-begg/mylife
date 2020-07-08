@@ -11,7 +11,21 @@ export const AddProject = ({ shouldShow = false }) => {
     const projectId = generatePushId();
     const { projects, setProjects } = useProjectsValue();
 
+    let user = firebase.auth().currentUser
+
+    let id = ""
+
+
+
+    if (user != null) {
+        id = user.uid
+        // let name = user.displayName
+
+    }
+
+
     const addProject = () =>
+
         projectName &&
         firebase
             .firestore()
@@ -19,7 +33,7 @@ export const AddProject = ({ shouldShow = false }) => {
             .add({
                 projectId,
                 name: projectName,
-                userId: '7861234AbC786egH',
+                userId: id,
             })
             .then(() => {
                 setProjects([...projects]);

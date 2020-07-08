@@ -1,6 +1,7 @@
 //Custom Fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
+
 //Login Main Container
 .login {
   width: 27em;
@@ -12,6 +13,7 @@
   margin-top: 350px;
   position: relative;
   z-index: 99;
+
   .container {
     display: flex;
     justify-content: center;
@@ -26,6 +28,7 @@
     z-index: 99;
     padding: 17px 10px;
     //transition: transform 200ms ease-in-out;
+    
   }
   .right-side {
     display: flex;
