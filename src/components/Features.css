@@ -2,7 +2,7 @@
 
 
 .section{
-    height: 100vh;
+    height: 50vh;
 }
 
 .card-container{
@@ -40,7 +40,7 @@
   }
 
 
-.card-frontt {
+.card-front {
     margin-top: 50px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.678);
     background-color: rgb(68, 160, 196);

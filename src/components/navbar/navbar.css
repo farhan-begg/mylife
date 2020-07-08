@@ -4,6 +4,10 @@
 .navbar-dark .navbar-nav .nav-link {
   color: #EEF5DB !important;
 }
+
+.nav-link:hover {
+  color: blue !important;
+}
 .sign-out-button{
     width: 100px;
     height: auto;
@@ -13,9 +17,6 @@
     border-radius: 25px;
     text-align: center;
     transition: 1000ms;
-  
-  
-
 }
 .sign-out-button:hover {
   background-color: transparent;

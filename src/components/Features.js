@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import './Features.css';
+// import './Features.css';
 import firebase from "../firebase";
 
 
@@ -11,7 +11,7 @@ function Features() {
         <h1 className="display">Product Features</h1>
         <div className="card-container">
             
-                <div className="card-frontt">
+                <div className="card-front">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
                             <img className="card-image" src="https://images.unsplash.com/photo-1547480053-7d174f67b557?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Avatar"/>
