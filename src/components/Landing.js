@@ -3,6 +3,7 @@ import React from 'react';
 // import { Navbar, Jumbotron, Nav, Container } from 'react-bootstrap';
 import './Landing.css';
 import About from './About'
+import Features from './Features'
 
 
 function Landing() {
@@ -21,6 +22,9 @@ function Landing() {
             <a href="/register" className="btn btn-white btn-animated">Start Your Journey</a>
           </div>
         </header>
+      </div>
+      <div>
+        <Features />
       </div>
       <div>
         <About />
