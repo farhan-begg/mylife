@@ -23,6 +23,18 @@ export const AddTask = ({
     const { selectedProject } = useSelectedProjectValue();
 
     const addTask = () => {
+        let user = firebase.auth().currentUser
+
+        let id = ""
+
+
+
+        if (user != null) {
+            id = user.uid
+            // let name = user.displayName
+
+        }
+
         const projectId = project || selectedProject;
         let collatedDate = '';
 
@@ -43,7 +55,7 @@ export const AddTask = ({
                     projectId,
                     task,
                     date: collatedDate || taskDate,
-                    userId: '7861234AbC786egH',
+                    userId: id,
                 })
                 .then(() => {
                     setTask('');

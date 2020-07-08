@@ -1,18 +1,34 @@
 /* eslint-disable no-nested-ternary */
 import { useState, useEffect } from 'react';
 import moment from 'moment';
-import firebase from '../firebase';
+import firebase, { auth } from '../firebase';
 import { collatedTasksExist } from '../helpers';
 
 export const useTasks = selectedProject => {
+
     const [tasks, setTasks] = useState([]);
     const [archivedTasks, setArchivedTasks] = useState([]);
+
+
+    let user = firebase.auth().currentUser
+
+    let id = ""
+
+
+
+    if (user != null) {
+        id = user.uid
+        // let name = user.displayName
+
+    }
+
+
 
     useEffect(() => {
         let unsubscribe = firebase
             .firestore()
             .collection('tasks')
-            .where('userId', '==', '7861234AbC786egH');
+            .where('userId', '==', id);
 
         unsubscribe =
             selectedProject && !collatedTasksExist(selectedProject)
@@ -54,11 +70,24 @@ export const useTasks = selectedProject => {
 export const useProjects = () => {
     const [projects, setProjects] = useState([]);
 
+    let user = firebase.auth().currentUser
+
+    let id = ""
+
+
+
+    if (user != null) {
+        id = user.uid
+        // let name = user.displayName
+
+    }
+
+
     useEffect(() => {
         firebase
             .firestore()
             .collection('projects')
-            .where('userId', '==', '7861234AbC786egH')
+            .where('userId', '==', id)
             .orderBy('projectId')
             .get()
             .then(snapshot => {

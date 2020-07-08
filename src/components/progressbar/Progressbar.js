@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import './Progressbar.css'
+import firebase, { auth } from '../../firebase'
+
+
+
+
 
 
 const colors = [
@@ -15,8 +20,8 @@ const colors = [
     "#B17179"
 ];
 
-
 class ProgressBar extends Component {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -27,7 +32,8 @@ class ProgressBar extends Component {
                     initial: 3,
                     complete: 0,
                     random: "#E45A84",
-                    finished: false
+                    finished: false,
+                    id: "",
                 },
 
             ],
@@ -36,38 +42,106 @@ class ProgressBar extends Component {
             initial: 0,
             complete: 0,
             colors: colors,
-            finished: false
+            finished: false,
+            id: ""
 
         }
     }
 
 
+    componentDidMount() {
+
+        let user = firebase.auth().currentUser
+        let id = ""
+
+        if (user != null) {
+            id = user.uid
+            // let name = user.displayName
+
+        }
+
+        firebase
+            .firestore()
+            .collection('habits')
+            .where('userId', '==', id)
+            .get()
+            .then(snapshot => {
+                const allHabits = snapshot.docs.map(habits => ({
+                    ...habits.data(),
+                }));
+
+                this.setState({
+                    habits: allHabits,
+                })
+            });
+    }
+
 
 
     addHabit = () => {
         var newState = { ...this.state }
+        let habitCounts = 0
 
-        if (this.state.newHabit && this.state.reps) {
-            newState.habits.push({
+        let user = firebase.auth().currentUser
+        let id = ""
+
+        if (user != null) {
+            id = user.uid
+            // let name = user.displayName
+
+        }
+
+
+
+        firebase
+            .firestore()
+            .collection('habits')
+            .add({
                 title: newState.newHabit,
                 reps: newState.reps || 0,
                 initial: newState.reps,
                 complete: 0,
                 random: newState.colors[Math.floor(Math.random() * newState.colors.length)],
-                finished: false
-            });
-        }
-        newState.newHabit = '';
-        newState.reps = '';
+                finished: false,
+                userId: id
 
-        this.setState(newState)
+
+
+            })
+            .then((docref) => {
+                console.log(docref.id)
+                if (this.state.newHabit && this.state.reps) {
+
+                    habitCounts = newState.habits.length
+
+                    newState.habits.push({
+                        title: newState.newHabit,
+                        reps: newState.reps || 0,
+                        initial: newState.reps,
+                        complete: 0,
+                        random: newState.colors[Math.floor(Math.random() * newState.colors.length)],
+                        finished: false,
+                        id: docref.id,
+                        userId: id
+
+                    });
+                }
+
+                this.setState(newState)
+                // newState.newHabit = '';
+                // newState.reps = '';
+
+            });
+
+
+
 
     }
     removeHabit = (i) => {
         var newState = { ...this.state }
         newState.habits.splice(i, 1)
         this.setState(newState)
-        console.log(this.state.habits);
+        // console.log(this.state.habits);
     }
     completeReps = (i) => {
         var newState = { ...this.state }
@@ -80,11 +154,34 @@ class ProgressBar extends Component {
         if (habit.reps === 0) {
             habit.finished = true;
         }
-        this.setState(newState)
+        this.setState(newState, () => {
+
+            let updateHabit = { complete: habit.complete, reps: habit.reps, finished: habit.finished }
+            let updateJson = JSON.stringify(updateHabit)
+
+
+            firebase
+                .firestore()
+                .collection("habits").doc(habit.id).update({ "complete": habit.complete, "reps": habit.reps, "finished": habit.finished })
+
+
+                .then(() => {
+                    console.log("*****************")
+
+                })
+
+
+
+
+
+
+
+
+        })
     }
 
     inputChange = (e) => {
-        console.log(e.target.name)
+        // console.log(e.target.name)
         var newState = { ...this.state }
         newState[e.target.name] = e.target.value
         this.setState(newState)
@@ -93,17 +190,8 @@ class ProgressBar extends Component {
 
     render() {
         return (
-
-
-
-
-
-
             <div class="container">
                 <div id="app">
-
-
-
 
                     <h1>Habit Tracker</h1>
 
