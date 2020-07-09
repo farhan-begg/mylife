@@ -12,10 +12,7 @@ import PrivateRoute from "./login/PrivateRoute";
 
 class App extends Component {
   render() {
-
-
     return (
-
       <AuthProvider>
         <Router>
           <div className="App">

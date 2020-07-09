@@ -5,20 +5,22 @@ import firebase, { auth } from '../firebase';
 import { collatedTasksExist } from '../helpers';
 
 export const useTasks = selectedProject => {
-
+    // initializing task and archived task to state
     const [tasks, setTasks] = useState([]);
     const [archivedTasks, setArchivedTasks] = useState([]);
 
+    // grabs user
     let user = firebase.auth().currentUser
     let id = ""
-
+    // if user exists save id
     if (user != null) {
         id = user.uid
         // let name = user.displayName
 
     }
-
+    // useEffect setting is running the function when value of selectedproject changes
     useEffect(() => {
+        // saving firebase query in a variable but not executing
         let unsubscribe = firebase
             .firestore()
             .collection('tasks')
@@ -37,12 +39,14 @@ export const useTasks = selectedProject => {
                         ? (unsubscribe = unsubscribe.where('date', '==', ''))
                         : unsubscribe;
 
+        // listens for change to task doc
+        // runs function everytime theres a change with task and task data
         unsubscribe = unsubscribe.onSnapshot(snapshot => {
             const newTasks = snapshot.docs.map(task => ({
                 id: task.id,
                 ...task.data(),
             }));
-
+            // updating state
             setTasks(
                 selectedProject === 'NEXT_7'
                     ? newTasks.filter(
@@ -72,6 +76,7 @@ export const useProjects = () => {
     }
 
     useEffect(() => {
+        // getting database at that certain point of time
         firebase
             .firestore()
             .collection('projects')

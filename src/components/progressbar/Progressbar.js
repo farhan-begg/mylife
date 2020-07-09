@@ -58,15 +58,32 @@ class ProgressBar extends Component {
         }
 
         firebase
+            // gets firestore
             .firestore()
+            // get a certain collection habits
             .collection('habits')
+            // grabs all documents inside collection with userId 
             .where('userId', '==', id)
+            // initializes query 
+            //promises are like variable true or false like
+            // a boolean js recoginzes value might change in future
+            // use promises not block code
             .get()
+            // waits until previous promise returned true
+            // wait untils all data is grabbed from firebase
             .then(snapshot => {
+                // snapshot live database 
+                // access all documents in our snapshot
+                // .map is looping through all documents and returning mutated(changing how it looks) data
+
                 const allHabits = snapshot.docs.map(habits => ({
                     ...habits.data(),
-                }));
+                    id: habits.id
 
+                }));
+                console.log(allHabits)
+                // updateing habit states with all habits from database
+                // state updates 
                 this.setState({
                     habits: allHabits,
                 })
@@ -91,10 +108,6 @@ class ProgressBar extends Component {
 
         }
 
-
-
-
-
         firebase
             .firestore()
             .collection('habits')
@@ -108,15 +121,11 @@ class ProgressBar extends Component {
                 userId: id,
 
 
-
-
             })
             .then((docref) => {
-                console.log(docref.id)
+                // console.log(docref.id)
                 if (this.state.newHabit && this.state.reps) {
-
                     habitCounts = newState.habits.length
-
                     newState.habits.push({
                         title: newState.newHabit,
                         reps: newState.reps || 0,
@@ -126,7 +135,6 @@ class ProgressBar extends Component {
                         finished: false,
                         id: docref.id,
                         userId: id
-
                     });
                 }
 
@@ -145,15 +153,7 @@ class ProgressBar extends Component {
     completeReps = (i) => {
         const newState = { ...this.state }
         const habit = newState.habits[i]
-
-
-        const db = firebase.firestore();
-
-
-
-        console.log(habit, i)
-
-
+        // console.log(habit, i)
         if (habit.reps > 0) {
             habit.reps -= 1;
             habit.complete += 1;
@@ -167,18 +167,7 @@ class ProgressBar extends Component {
             // let updateJson = JSON.stringify(updateHabit)
 
 
-            let user = firebase.auth().currentUser
-            let id = ""
-
-
-
-            if (user != null) {
-                id = user.uid
-                // let name = user.displayName
-
-            }
-
-
+            console.log(habit.id)
 
             firebase
                 .firestore()
