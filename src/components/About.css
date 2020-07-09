@@ -16,7 +16,6 @@
     flex-direction: row;
     justify-content: center;
     /* margin: auto; */
-    padding: 100px;
     perspective: 1000px;
 }
 
@@ -51,8 +50,9 @@
     background-color: #51344D;
     border-radius: 20px;
     height: 450px;
+    margin: 0px 35px 0px 35px;
     padding: 2em;
-    width: 15%;
+    width: 20%;
     transition: 0.5;
   }
   
@@ -84,7 +84,7 @@
   
   .flip-card-front {
     color: #EEF5DB;
-    margin-top: 70px;
+    /* margin-top: 70px; */
   }
   
   .flip-card-back {
@@ -130,7 +130,7 @@
     height: 700px;
   }
   .flip-card-front {
-    margin-top: 80px;
+    /* margin-top: 80px; */
   }
   .flip-card-back {
     margin-top: 100px;
