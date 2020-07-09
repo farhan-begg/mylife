@@ -5,14 +5,18 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+    background: rgb(200,225,201);
+    background: linear-gradient(180deg, rgba(200,225,201,1) 14%, rgba(152,193,174,1) 51%, rgba(194,221,197,1) 96%, rgba(200,225,201,1) 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%); */
+
 }
 
 .card-container{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin: auto;
+    padding: 40px;
     perspective: 1000px;
 }
 

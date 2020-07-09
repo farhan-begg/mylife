@@ -3,7 +3,8 @@
 
 .section-feature{
     height: 100vh;
-    background-color:#51344D;
+    background: rgb(200,225,201);
+background: linear-gradient(180deg, rgba(200,225,201,1) 14%, rgba(152,193,174,1) 51%, rgba(194,221,197,1) 96%, rgba(200,225,201,1) 100%);
 }
 
 /*.card-container{
