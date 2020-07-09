@@ -6,7 +6,7 @@ import './Footer.css'
 function Footer() {
     return (
         <div className="page-container">
-            <div className="conent-wrap">
+            <div className="conent-wrap" >
                 <div className='main-footer'>
                     <div className="container-1">
 
