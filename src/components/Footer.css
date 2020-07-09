@@ -1,18 +1,8 @@
-.main-footer{
-	background: #bfd8c048;
-	/* rgb(178, 197, 163); */
-    opacity: .5;
-    color: rgb(20, 19, 19);
-    
-    padding-top: 10px;
-    position: relative;
-    bottom: -400px;
-    width: 100%;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 
-
-    
-
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;   
 }
 p {
     font-size: 25px;
@@ -26,23 +16,14 @@ p {
 }
 
 .page-container{
-    display:flex;
-    flex-direction: column;
-  
+	position: relative;
+	min-height: 60vh;
 
 }
 
-ul.list-unstyled{
-    text-align: center;
-    border-left: 3px solid rgb(57, 124, 26);
-    padding: 4px;
-    font-size: 20px;
-
+.content-wrap{
+	padding-bottom: 2.5rem;
 }
-footer {
-    padding-top: 250px;
-}
-
 
 
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
