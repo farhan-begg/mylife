@@ -5,9 +5,6 @@ import firebase, { auth } from '../../firebase'
 
 
 
-
-
-
 const colors = [
     "#E45A84",
     "#FFD478",
@@ -43,7 +40,7 @@ class ProgressBar extends Component {
             complete: 0,
             colors: colors,
             finished: false,
-            id: ""
+            id: "",
 
         }
     }
@@ -81,15 +78,20 @@ class ProgressBar extends Component {
     addHabit = () => {
         var newState = { ...this.state }
         let habitCounts = 0
+        const habit = newState.habits
 
         let user = firebase.auth().currentUser
         let id = ""
+
+
 
         if (user != null) {
             id = user.uid
             // let name = user.displayName
 
         }
+
+
 
 
 
@@ -103,7 +105,8 @@ class ProgressBar extends Component {
                 complete: 0,
                 random: newState.colors[Math.floor(Math.random() * newState.colors.length)],
                 finished: false,
-                userId: id
+                userId: id,
+
 
 
 
@@ -128,24 +131,28 @@ class ProgressBar extends Component {
                 }
 
                 this.setState(newState)
-                // newState.newHabit = '';
-                // newState.reps = '';
-
+                newState.newHabit = '';
+                newState.reps = '';
             });
-
-
-
 
     }
     removeHabit = (i) => {
-        var newState = { ...this.state }
+        const newState = { ...this.state }
         newState.habits.splice(i, 1)
         this.setState(newState)
         // console.log(this.state.habits);
     }
     completeReps = (i) => {
-        var newState = { ...this.state }
-        var habit = newState.habits[i]
+        const newState = { ...this.state }
+        const habit = newState.habits[i]
+
+
+        const db = firebase.firestore();
+
+
+
+        console.log(habit, i)
+
 
         if (habit.reps > 0) {
             habit.reps -= 1;
@@ -156,25 +163,38 @@ class ProgressBar extends Component {
         }
         this.setState(newState, () => {
 
-            let updateHabit = { complete: habit.complete, reps: habit.reps, finished: habit.finished }
-            let updateJson = JSON.stringify(updateHabit)
+            // let updateHabit = { complete: habit.complete, reps: habit.reps, finished: habit.finished }
+            // let updateJson = JSON.stringify(updateHabit)
+
+
+            let user = firebase.auth().currentUser
+            let id = ""
+
+
+
+            if (user != null) {
+                id = user.uid
+                // let name = user.displayName
+
+            }
+
 
 
             firebase
                 .firestore()
-                .collection("habits").doc(habit.id).update({ "complete": habit.complete, "reps": habit.reps, "finished": habit.finished })
-
+                .collection("habits")
+                .doc(habit.id)
+                .update({
+                    "complete": habit.complete,
+                    "reps": habit.reps,
+                    "finished": habit.finished
+                })
 
                 .then(() => {
                     console.log("*****************")
 
+
                 })
-
-
-
-
-
-
 
 
         })
@@ -190,7 +210,7 @@ class ProgressBar extends Component {
 
     render() {
         return (
-            <div class="container">
+            <div class="container" >
                 <div id="app">
 
                     <h1>Habit Tracker</h1>
@@ -201,32 +221,33 @@ class ProgressBar extends Component {
                         <button id="creator" onClick={this.addHabit}>Add</button>
                     </div>
                 </div>
-                {this.state.habits.map((habit, i) => {
-                    return (
-                        <div className="four columns">
-                            <h4> {habit.title}</h4>
-                            <div className="shell">
-                                <div className="bar" style={{ width: 100 - habit.complete * (100 / habit.initial) + '%' }}>
+                {
+                    this.state.habits.map((habit, i) => {
+                        return (
+                            <div className="four columns">
+                                <h4> {habit.title}</h4>
+                                <div className="shell">
+                                    <div className="bar" style={{ width: 100 - habit.complete * (100 / habit.initial) + '%' }}>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="lower">
-                                <span onClick={() => { this.removeHabit(i) }} >
-                                    <i class="fa fa-times"></i>
-                                </span>
-                                <button id="progress" onClick={() => { this.completeReps(i) }}><i class="fa fa-plus"></i>
-                                </button>
-                            </div>
-                            {!habit.finished && <div> {habit.complete}/{habit.initial} times</div>}
-                            {habit.finished && <div>Complete</div>}
+                                <div className="lower">
+                                    <span onClick={() => { this.removeHabit(i) }} >
+                                        <i class="fa fa-times"></i>
+                                    </span>
+                                    <button id="progress" onClick={() => { this.completeReps(i) }}><i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                                {!habit.finished && <div> {habit.complete}/{habit.initial} times</div>}
+                                {habit.finished && <div>Complete</div>}
 
-                        </div>
-                    )
-                })
+                            </div>
+                        )
+                    })
 
                 }
 
-            </div>
+            </div >
 
 
 
