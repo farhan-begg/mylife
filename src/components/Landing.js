@@ -28,6 +28,7 @@ function Landing() {
       </div>
       <div>
         <About />
+
       </div>
     </div>
 

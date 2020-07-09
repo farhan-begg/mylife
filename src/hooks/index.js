@@ -12,10 +12,10 @@ export const useTasks = selectedProject => {
     // grabs user
     let user = firebase.auth().currentUser
     let id = ""
+
     // if user exists save id
     if (user != null) {
         id = user.uid
-        // let name = user.displayName
 
     }
     // useEffect setting is running the function when value of selectedproject changes
@@ -72,11 +72,10 @@ export const useProjects = () => {
     let id = ""
     if (user != null) {
         id = user.uid
-        // let name = user.displayName
     }
 
     useEffect(() => {
-        // getting database at that certain point of time
+        // getting project database at that certain point of time
         firebase
             .firestore()
             .collection('projects')
