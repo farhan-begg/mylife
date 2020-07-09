@@ -1,12 +1,12 @@
 import React from 'react';
-// import './Features.css';
+import './Features.css';
 import firebase from "../firebase";
 
 
 function Features() {
 
   return (
-    <div className="section">
+    <div className="section-feature">
         <h1 className="display">Product Features</h1>
         <div className="card-container">
             

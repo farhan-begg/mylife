@@ -3,6 +3,9 @@
 
 .section{
     height: 100vh;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
 }
 
 .card-container{
@@ -41,7 +44,7 @@
 .card-front {
     /* margin-top: 45px; */
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.678);
-    background-color: #B76E79;
+    background-color: #51344D;
     border-radius: 20px;
     height: 450px;
     padding: 2em;
