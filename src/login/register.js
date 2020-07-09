@@ -27,11 +27,11 @@ export const Register = ({ history }) => {
     <Form onSubmit={handleSignUp}>
 
       <div className="base-container">
-        {/* <style>{'body { background-image:url(https://i1.wp.com/wanderlustphotosblog.com/wp-content/uploads/2018/02/beach-sunset.jpg?resize=960%2C638&ssl=1)}'}</style> */}
+        <style>{'body { background-image:url(https://wallpaperaccess.com/full/16692.jpg),}'}</style>
         <div className="header-99">Register</div>
         <div className="content-99">
           <div className="image-99">
-            {/* <img src="http://hdwpro.com/wp-content/uploads/2019/02/mountain-4K-Nature-image.jpg" /> */}
+            <div className="Logo"></div>
           </div>
           <div className="form">
             <div className="form-group">
@@ -49,7 +49,7 @@ export const Register = ({ history }) => {
           </div>
         </div>
         <div className="footer">
-          <button variant="primary" type="submit">
+          <button className="submit-button" variant="primary" type="submit">
             Submit
             </button>
 

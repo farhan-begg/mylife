@@ -9,20 +9,14 @@ export const useTasks = selectedProject => {
     const [tasks, setTasks] = useState([]);
     const [archivedTasks, setArchivedTasks] = useState([]);
 
-
     let user = firebase.auth().currentUser
-
     let id = ""
-
-
 
     if (user != null) {
         id = user.uid
         // let name = user.displayName
 
     }
-
-
 
     useEffect(() => {
         let unsubscribe = firebase
@@ -71,17 +65,11 @@ export const useProjects = () => {
     const [projects, setProjects] = useState([]);
 
     let user = firebase.auth().currentUser
-
     let id = ""
-
-
-
     if (user != null) {
         id = user.uid
         // let name = user.displayName
-
     }
-
 
     useEffect(() => {
         firebase
