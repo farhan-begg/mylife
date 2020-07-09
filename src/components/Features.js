@@ -8,7 +8,7 @@ function Features() {
     return (
         <div className="section-feature">
             <h1 className="display">Product Features</h1>
-            <div className="card-container">
+            <div className="card-container-1">
 
                 <div className="card-front-1">
                     <div className="flip-card-front-8">
