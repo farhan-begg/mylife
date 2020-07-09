@@ -24,7 +24,7 @@ function Landing() {
         </header>
       </div>
       <div>
-        <Features />
+        <Features /> 
       </div>
       <div>
         <About />
