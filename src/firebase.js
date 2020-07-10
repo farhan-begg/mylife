@@ -21,7 +21,7 @@ const firebaseConfig = {
     storageBucket: "my-life-eba96.appspot.com",
     messagingSenderId: "580539366052",
     appId: "1:580539366052:web:92f1f1d0ca243c0a950431",
-    measurementId: "G-2F6CKG0C6X"
+    measurementId: "G-2F6CKG0C6X",
 };
 
 
