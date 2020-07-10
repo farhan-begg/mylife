@@ -21,15 +21,6 @@ class ProgressBar extends Component {
         super(props)
         this.state = {
             habits: [
-                {
-                    title: 'Bike',
-                    reps: 3,
-                    initial: 3,
-                    complete: 0,
-                    random: "#E45A84",
-                    finished: false,
-                    id: "",
-                },
 
             ],
             newHabit: '',
@@ -126,8 +117,22 @@ class ProgressBar extends Component {
 
     removeHabit = (i) => {
         const newState = { ...this.state }
+        const habit = newState.habits[i]
         newState.habits.splice(i, 1)
-        this.setState(newState)
+        // this.setState(newState)
+        this.setState(newState, () => {
+
+
+            firebase
+                .firestore()
+                .collection("habits")
+                .doc(habit.id)
+                .delete()
+                .then(() => {
+                    console.log("*****************")
+                })
+
+        })
     }
 
     completeReps = (i) => {
@@ -168,39 +173,42 @@ class ProgressBar extends Component {
 
     render() {
         return (
-            <div class="container" >
-                <div id="app">
-                    <h1>Habit Tracker</h1>
-                    <div>
-                        <input type="text" placeholder="Name Your Habit" name="newHabit" onChange={this.inputChange} value={this.state.newHabit} /><br />
-                        <input type="number" placeholder="Amount" name="reps" onChange={this.inputChange} value={this.state.reps} /><br />
-                        <button id="creator" onClick={this.addHabit}>Add</button>
+            <div className="section-3" >
+                <div class="container" >
+                    <div id="app">
+                        <h1>Habit Tracker</h1>
+                        <div>
+                            <input type="text" placeholder="Name Your Habit" name="newHabit" onChange={this.inputChange} value={this.state.newHabit} /><br />
+                            <input type="number" placeholder="Amount" name="reps" onChange={this.inputChange} value={this.state.reps} /><br />
+                            <button id="creator" onClick={this.addHabit}>Add</button>
+                        </div>
                     </div>
-                </div>
-                {
-                    this.state.habits.map((habit, i) => {
-                        return (
-                            <div className="four columns">
-                                <h4> {habit.title}</h4>
-                                <div className="shell">
-                                    <div className="bar" style={{ width: 100 - habit.complete * (100 / habit.initial) + '%' }}>
-                                    </div>
-                                </div>
+                    {
+                        this.state.habits.map((habit, i) => {
+                            return (
 
-                                <div className="lower">
-                                    <span onClick={() => { this.removeHabit(i) }} >
-                                        <i class="fa fa-times"></i>
-                                    </span>
-                                    <button id="progress" onClick={() => { this.completeReps(i) }}><i class="fa fa-plus"></i>
-                                    </button>
+                                <div className="four columns">
+                                    <h4> {habit.title}</h4>
+                                    <div className="shell">
+                                        <div className="bar" style={{ width: 100 - habit.complete * (100 / habit.initial) + '%' }}>
+                                        </div>
+                                    </div>
+
+                                    <div className="lower">
+                                        <span onClick={() => { this.removeHabit(i) }} >
+                                            <i class="fa fa-times"></i>
+                                        </span>
+                                        <button id="progress" onClick={() => { this.completeReps(i) }}><i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    {!habit.finished && <div className="initial"> {habit.complete}/{habit.initial} times</div>}
+                                    {habit.finished && <div className="complete">Complete</div>}
                                 </div>
-                                {!habit.finished && <div> {habit.complete}/{habit.initial} times</div>}
-                                {habit.finished && <div>Complete</div>}
-                            </div>
-                        )
-                    })
-                }
-            </div >
+                            )
+                        })
+                    }
+                </div >
+            </div>
         )
     }
 }
