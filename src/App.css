@@ -8,24 +8,20 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
 }
 
-
-
 .sidebar {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  margin: 0; 
+  height: 100%; 
   user-select: none;
   width: 266px;
-  height: calc(100vh);
-  padding-top: 74px;
   position: fixed;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  padding-top: 50px;
   border-right: 1px solid #f1f1f1;
   background-color: #fafafa;
+
 }
 @media (max-width: 900px) {
   .sidebar {
@@ -215,6 +211,7 @@ body {
   grid-template-columns: 1fr auto;
   max-width: 922px;
   margin: auto;
+  
 }
 
 /* Tasks
@@ -230,6 +227,7 @@ body {
   padding-right: 40px;
   padding-top: 80px;
   padding-bottom: 84px;
+
 }
 @media (max-width: 900px) {
   .tasks {

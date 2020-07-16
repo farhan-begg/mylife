@@ -111,11 +111,14 @@
    .sidebar {
      @include no-select();
      width: 266px;
-     height: calc(100vh);
-     padding-top: 74px;
+     height: 100%;
+
      position: fixed;
-     overflow-x: hidden;
-     overflow-y: hidden;
+     height: 100%;
+     padding-left: 0;
+  
+
+     overflow: hidden;
      border-right: $generic-border;
      background-color: #fafafa;
    
