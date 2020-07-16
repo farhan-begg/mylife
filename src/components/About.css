@@ -2,7 +2,7 @@
 
 
 .section{
-    height: 50vh;
+    height: 45vh;
     background-size: cover;
     background-position: center;
     background: rgb(200,225,201);
@@ -20,6 +20,7 @@
 }
 
 .display{
+  margin-top: 1000px;
     margin: 40px 0px 40px 0px;
     text-align: center;
     font-family: 'Roboto';
@@ -28,6 +29,7 @@
     font-weight: bold;
     line-height: 1em;
     font-size: 3em;
+
 }
   
  .card-image {
