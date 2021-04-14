@@ -9,6 +9,10 @@ This section should list any major frameworks that you built your project using.
 * [Laravel](https://laravel.com)
 
 
+## Link
+[Discord Live Link](https://my-life-eba96.web.app/)
+
+
 
 <!-- GETTING STARTED -->
 ## Getting Started

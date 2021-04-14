@@ -25,8 +25,7 @@ function Landing() {
       </div>
       <div>
 
-        <Features />
-        <About />
+      
       </div>
       <div>
 
