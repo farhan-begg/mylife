@@ -49,7 +49,7 @@ export const Register = ({ history }) => {
           </div>
         </div>
         <div className="footer">
-          <button className="submit-button" variant="primary" type="submit">
+          <button className="submit-button" variant="primary" type="submit" Redirect="/home">
             Submit
             </button>
 

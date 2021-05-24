@@ -1,22 +1,42 @@
-.navbar{
-  background-color: #4A5240;
-}
-.navbar-dark .navbar-nav .nav-link {
-  color: #EEF5DB !important;
+
+.navbar {
+
+
+  font-weight: 200;
+  background-color: #363E4A;
+
+
+
+
+
+
 }
 
-.nav-link:hover {
-  color: blue !important;
+
+
+
+
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255, 255, 255) !important;
+  
+
+  
 }
+
+
 .sign-out-button{
-    width: 100px;
-    height: auto;
+    width: 80px;
+    height: 25px;
     border: 1.5px solid #EEF5DB;
     background-color: #66C3FF;
     color: #EEF5DB;
-    border-radius: 25px;
+    border-radius: 10px;
     text-align: center;
     transition: 1000ms;
+    font-size: 10px;
+
 }
 .sign-out-button:hover {
   background-color: transparent;

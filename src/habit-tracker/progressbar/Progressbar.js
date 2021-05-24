@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import './Progressbar.css'
 import firebase, { auth } from '../../firebase'
+import { Button, Card, FormControl, InputGroup, ModalTitle } from "react-bootstrap";
+import { BsFolderMinus, BsPlus } from "react-icons/bs";
+import { Content } from "../../components/layout/Content";
+
 
 const colors = [
     "#E45A84",
@@ -173,22 +177,38 @@ class ProgressBar extends Component {
 
     render() {
         return (
-            <div className="section-3" >
-                <div class="container" >
-                    <div id="app">
-                        <h1>Habit Tracker</h1>
-                        <div>
-                            <input type="text" placeholder="Name Your Habit" name="newHabit" onChange={this.inputChange} value={this.state.newHabit} /><br />
-                            <input type="number" placeholder="Amount" name="reps" onChange={this.inputChange} value={this.state.reps} /><br />
-                            <button id="creator" onClick={this.addHabit}>Add</button>
-                        </div>
-                    </div>
+    <div>
+            
+          
+        
+            <div className="sidebar" data-testid="sidebar">
+            <div className="sidebar__generic">
+                
+            <img class="rounded-circle" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
+          data-holder-rendered="true"/>
+
+                
+                        <h1 className="title"> Habit Tracker</h1>        
+                         {/* <img class="card-img-top" src="https://image.freepik.com/free-photo/man-jumping-impossible-possible-cliff-sunset-background-business-concept-idea_1323-266.jpg" alt="Card image cap" /> */}
+
+                            <FormControl type="text" placeholder="Name Your Habit" name="newHabit" onChange={this.inputChange} value={this.state.newHabit} /><br />
+                            <FormControl type="number" placeholder="Amount" name="reps" onChange={this.inputChange} value={this.state.reps} /><br />
+                            <span className="add-button" onClick={this.addHabit}>Add</span>
+                   </div>
+                   </div>     
+    
+          
+
+         
+                    <div className="progress_tasks" data-testid="tasks">
                     {
                         this.state.habits.map((habit, i) => {
                             return (
+                        
 
                                 <div className="four columns">
-                                    <h4> {habit.title}</h4>
+                                    <h7 classname="progress_title"> {habit.title}</h7>
+                                    <ul className="tasks__list">
                                     <div className="shell">
                                         <div className="bar" style={{ width: 100 - habit.complete * (100 / habit.initial) + '%' }}>
                                         </div>
@@ -196,19 +216,34 @@ class ProgressBar extends Component {
 
                                     <div className="lower">
                                         <span onClick={() => { this.removeHabit(i) }} >
-                                            <i class="fa fa-times"></i>
+                                        <BsFolderMinus/>
                                         </span>
-                                        <button id="progress" onClick={() => { this.completeReps(i) }}><i class="fa fa-plus"></i>
-                                        </button>
+                                        <span type="button"  id="progress" onClick={() => { this.completeReps(i) }}>  <BsPlus /></span>
+
+                                        {/* <button id="progress" onClick={() => { this.completeReps(i) }}><i class="fa fa-plus"></i> */}
+                                        {/* </button> */}
+                               
                                     </div>
                                     {!habit.finished && <div className="initial"> {habit.complete}/{habit.initial} times</div>}
                                     {habit.finished && <div className="complete">Complete</div>}
+                                    </ul>
                                 </div>
+                           
                             )
                         })
                     }
+                    </div>
                 </div >
-            </div>
+        
+        
+
+
+
+
+
+
+           
+           
         )
     }
 }
@@ -216,3 +251,7 @@ class ProgressBar extends Component {
 render(<ProgressBar />, document.getElementById("root"));
 
 export default ProgressBar;
+
+
+
+

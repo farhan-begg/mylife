@@ -8,6 +8,7 @@ import {
 import { Projects } from '../Projects';
 import { useSelectedProjectValue } from '../../context';
 import { AddProject } from '../AddProject';
+import './Sidebar.css'
 
 export const Sidebar = () => {
     const { setSelectedProject } = useSelectedProjectValue();
@@ -17,11 +18,13 @@ export const Sidebar = () => {
     return (
 
         <div className="sidebar" data-testid="sidebar">
-            <ul className="sidebar__generic">
+            <div className="sidebar__generic">
+
                 <li
                     data-testid="inbox"
                     className={active === 'inbox' ? 'active' : undefined}
                 >
+                    
                     <div
                         data-testid="inbox-action"
                         aria-label="Show inbox tasks"
@@ -64,7 +67,7 @@ export const Sidebar = () => {
                             }
                         }}
                     >
-                        <span>
+                        <span className="icon">
                             <FaRegCalendar />
                         </span>
                         <span>Today</span>
@@ -96,7 +99,7 @@ export const Sidebar = () => {
                         <span>Next 7 days</span>
                     </div>
                 </li>
-            </ul>
+            </div>
             <div
                 className="sidebar__middle"
                 aria-label="Show/hide projects"

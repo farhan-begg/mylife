@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import { Navbar, Nav, } from 'react-bootstrap'
 import './navbar.css'
 import firebase from '../../firebase'
 
@@ -30,12 +30,16 @@ function Customnavbar() {
     }
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="rgba(238, 245, 219, 0.397);" variant="dark">
+        <div className="background-image"> 
+        
+        <Navbar collapseOnSelect expand="lg" >
+
             <div className="Logo"></div>
-            <Navbar.Brand href="/" style={{ color: "#EEF5DB;" }}>My Lyfe</Navbar.Brand>
+            <Navbar.Brand className="navbar_brand"  style={{ color: "white" }} href="/" >My Lyfe</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="justify-content-end" style={{ width: "100%" }}>
+                <Nav.Link href="/">Home 🛖</Nav.Link>
                     <Nav.Link href="/todolist">Todolist 📝</Nav.Link>
                     <Nav.Link href="/habit">Habit Tracker 📈</Nav.Link>
 
@@ -53,6 +57,7 @@ function Customnavbar() {
             </Navbar.Collapse>
         </Navbar >
 
+        </div>
 
 
 

@@ -1,19 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+
+
 .login {
   width: 27em;
   height: 40em;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 350px;
+margin-top: 10px;
+  margin-bottom: 25%;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   z-index: 99;
+}
+
+label{
+  color: white !important;
+}
+.login-section{
+  height: 25%;
+}
+.base-container .header-99 {
+  color: white;
 }
 .login .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:  #51344D;
+  background-color: #363E4A;;
   box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.2);
   border-radius: 4px;
   position: relative;
@@ -23,12 +39,19 @@
   z-index: 99;
   padding: 17px 10px;
 }
+
+
+base-container .content-99 .form .form-group label {
+  color: white;
+  font-size: 20px;
+}
 .login .right-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 90%;
-  background-color: #3498db;
+  background-image: linear-gradient(to right bottom, rgba(255, 242, 67, 0.589) 5%, rgb(136, 204, 221) 100%), url("https://miro.medium.com/max/3172/1*LIJf-T5WXGsUVC7d4Ji8nA.jpeg");
+
   width: 100%;
   position: absolute;
   right: -34%;

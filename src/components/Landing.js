@@ -2,8 +2,8 @@
 import React from 'react';
 // import { Navbar, Jumbotron, Nav, Container } from 'react-bootstrap';
 import './Landing.css';
-import About from './About'
-import Features from './Features'
+
+
 
 
 function Landing() {

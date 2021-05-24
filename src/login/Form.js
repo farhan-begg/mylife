@@ -1,8 +1,8 @@
 import React from "react";
-import "./Appa.scss";
+import "./Appa.css";
 import { Login, Register } from "./index";
 
-class Appa extends React.Component {
+class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,7 +33,7 @@ class Appa extends React.Component {
         const current = isLogginActive ? "Register" : "Login";
         const currentActive = isLogginActive ? "login" : "register";
         return (
-            <div className="Appa" align="center">
+            <div className="login-section">
                 <div className="login">
                     <div className="container" ref={ref => (this.container = ref)}>
                         {isLogginActive && (
@@ -69,4 +69,4 @@ const RightSide = props => {
     );
 };
 
-export default Appa;
+export default Form;

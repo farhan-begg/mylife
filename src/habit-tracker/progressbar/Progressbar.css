@@ -1,0 +1,274 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,100);
+body {
+
+  font-family: "Lato", sans-serif;
+}
+
+
+/* SIDEBAR POSITION */
+.sidebar {
+
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 266px;
+}
+.sidebar__content {
+  padding: 8px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+.progressbar_tasks{
+  margin: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(30px);
+  margin-left: 266px;
+  height:100vh;
+  vertical-align: top;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 80px;
+  padding-bottom: 84px;
+  position: fixed;
+  overflow: auto;
+  padding: 25px;
+}
+.card{
+  background-color: #363E4A;
+display: flex;
+padding-bottom: auto;
+
+
+}
+
+.card__input.card{
+  margin: 20px;
+  padding: 20px;
+margin-left: auto;
+margin-right: auto;
+  height: 50%;
+  width: 90%;
+  position: relative;
+  flex-direction: column;
+  background-color: #363E4A;
+}
+
+h1.title{
+  color: white;
+  font-size: larger;
+  padding-left: 25px;
+  padding-right: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+input[type="text"],
+input[type="number"] {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 0.1px solid rgba(98, 98, 98, 0.156);
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+input[type="number"] {
+  width: 130px;
+  margin-bottom: 30px;
+}
+
+
+#progress {
+  position: absolute;
+  bottom: -100px;
+  right: 22px;
+  color: green;
+  margin: 120px 0 10px 0;
+  border-radius: 100%;
+  cursor: pointer;
+
+}
+
+.card-img-top{
+  padding: 25px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.lower div {
+  float: left;
+  font-size: 1.4em;
+  margin: 18px 0 0 3px;
+}
+.lower span {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+  color: black;
+}
+
+
+.habit {
+  margin-top: 20px;
+}
+
+.columns {
+  position: relative;
+  margin: 20px 20px 0 0;
+  background: #555;
+  padding: 35px;
+  min-width: 300px;
+}
+.columns h4 {
+  margin-bottom: 12;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shell {
+  height: 20px;
+  width: 300px;
+  border-radius: 13px;
+  background: linear-gradient(to right,#00a2ff, #e3505a);
+  overflow: hidden;
+  margin-top:10px ;
+
+}
+
+.bar {
+  background-color: rgb(159, 159, 159);
+  height: 20px;
+  float: right;
+}
+
+.slide-transition {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.slide-enter,
+.slide-leave {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 550px) {
+  .columns {
+  
+  }
+  .columns .shell {
+
+    
+  }
+
+   .shell {
+    width: 200px;
+    margin-right: 100px;
+  }
+  
+  div.four.columns{
+
+
+    width: 70%;
+    text-align: center;
+    font-size: 10px;
+    font-weight: lighter;
+    margin-left: auto;
+    margin-right: auto;
+  
+  
+  }
+
+}
+
+
+div.four.columns{
+
+  margin: 25px;
+  width: 70%;
+  border-bottom: .5px solid rgb(0, 162, 255);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+ 
+
+
+}
+
+.complete{
+  padding: 10px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+span.add-button{
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+span.add-button:hover{
+  color: grey;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  box-shadow: white;
+}
+
+
+
+.progress_tasks {
+  margin: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(30px);
+  margin-left: 266px;
+  border-right: 1px solid #f1f1f1;
+  height:100vh;
+  vertical-align: top;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 80px;
+  padding-bottom: 84px;
+  position: fixed;
+  overflow: auto;
+
+}
+@media (max-width: 900px) {
+  .progress_tasks {
+    margin-left: 0;
+    width: 100%;
+
+  }
+}
+
+ h7{
+  font-size: 15px;
+  font-weight: lighter;
+  margin: 20px;
+  padding-left: 25px;
+  padding-bottom: 40p
+}
+
+
+img.rounded-circle{
+  width: 100px;
+  height: 100px;
+  margin-left: 75px;
+}
