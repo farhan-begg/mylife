@@ -1,79 +1,79 @@
 .bg-login{
-  background-image: url("http://hdwpro.com/wp-content/uploads/2019/02/mountain-4K-Nature-image.jpg");
-}
-
-
-
-.base-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #51344D;
-  
-
-
-  .header-99 {
-    font-size: 24px;
-    font-family: "Open Sans", sans-serif;
+    background-image: url("http://hdwpro.com/wp-content/uploads/2019/02/mountain-4K-Nature-image.jpg");
   }
-
-  .content-99 {
+  
+  
+  
+  .base-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
-
-    .image-99 {
-       margin-top: 10px;
-      
-      img {
-        width: 50%;
-        height: 50%;
-        border-radius: 24px;
-        padding: 10px;
-      }
+    align-items: center;
+    color: #51344D;
+    
+  
+  
+    .header-99 {
+      font-size: 24px;
+      font-family: "Open Sans", sans-serif;
     }
-
-    .form {
-      margin-top: 2em;
+  
+    .content-99 {
       display: flex;
       flex-direction: column;
-      align-items: center;
-
-      .form-group {
+  
+      .image-99 {
+         margin-top: 10px;
+        
+        img {
+          width: 50%;
+          height: 50%;
+          border-radius: 24px;
+          padding: 10px;
+        }
+      }
+  
+      .form {
+        margin-top: 2em;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        width: fit-content;
-        label {
-          font-size: 20px;
-        }
-        input {
-          margin-top: 6px;
-          min-width: 18em;
-          height: 37px;
-          padding: 0px 10px;
-          font-size: 16px;
-          font-family: "Open Sans", sans-serif;
-          background-color: #f3f3f3;
-          border: 0;
-          border-radius: 4px;
-          margin-bottom: 31px;
-          transition: all 250ms ease-in-out;
-          &:hover {
-            //background-color: #ffffff;
-            //box-shadow: 0px 0px 14px 0.3px #0e81ce96;
+        align-items: center;
+  
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: fit-content;
+          label {
+            font-size: 20px;
           }
-
-          &:focus {
-            outline: none;
-            box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+          input {
+            margin-top: 6px;
+            min-width: 18em;
+            height: 37px;
+            padding: 0px 10px;
+            font-size: 16px;
+            font-family: "Open Sans", sans-serif;
+            background-color: #f3f3f3;
+            border: 0;
+            border-radius: 4px;
+            margin-bottom: 31px;
+            transition: all 250ms ease-in-out;
+            &:hover {
+              //background-color: #ffffff;
+              //box-shadow: 0px 0px 14px 0.3px #0e81ce96;
+            }
+  
+            &:focus {
+              outline: none;
+              box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+            }
           }
         }
       }
     }
+  
+    .footer {
+      margin-top: 3em;
+    }
   }
-
-  .footer {
-    margin-top: 3em;
-  }
-}

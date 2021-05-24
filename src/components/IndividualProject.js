@@ -30,6 +30,7 @@ export const IndividualProject = ({ project }) => {
                 data-testid="delete-project"
                 onClick={() => setShowConfirm(!showConfirm)}
                 onKeyDown={(e) => {
+                    
                     if (e.key === 'Enter') setShowConfirm(!showConfirm);
                 }}
                 tabIndex={0}
@@ -43,7 +44,16 @@ export const IndividualProject = ({ project }) => {
                             <p></p>
                             <button
                                 type="button"
-                                onClick={() => deleteProject(project.docId)}
+                        
+                                onClick={(e) => deleteProject(project.docId,
+                                    e.preventDefault()
+
+                             
+                                    
+                                    
+                                    )
+                                
+                                }
                             >
                                 Delete
                             </button>

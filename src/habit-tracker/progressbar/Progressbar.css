@@ -5,22 +5,6 @@ body {
 }
 
 
-/* SIDEBAR POSITION */
-.sidebar {
-
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 266px;
-}
-.sidebar__content {
-  padding: 8px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-
 .progressbar_tasks{
   margin: 0;
   width: 100%;
@@ -60,10 +44,13 @@ margin-right: auto;
 h1.title{
   color: white;
   font-size: larger;
-  padding-left: 25px;
-  padding-right: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #e3505a;
+  font-weight: lighter;
+
+
 }
 input[type="text"],
 input[type="number"] {
@@ -221,6 +208,7 @@ div.four.columns{
 span.add-button{
   margin-left: 25px;
   cursor: pointer;
+  color: #00a2ff;
 }
 
 span.add-button:hover{
