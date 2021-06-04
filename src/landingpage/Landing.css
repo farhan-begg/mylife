@@ -1,4 +1,3 @@
-
 .header-1 {
     height: 100vh;
     background-image: linear-gradient(to right bottom, rgba(255, 242, 67, 0.589) 5%, rgb(136, 204, 221) 100%), url("https://miro.medium.com/max/3172/1*LIJf-T5WXGsUVC7d4Ji8nA.jpeg");
@@ -7,7 +6,6 @@
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
 }
-
 
 .logo-box {
     position: absolute;
@@ -175,4 +173,53 @@
 .btn-animated {
     animation: moveInBottom 1s ease-in .75s;
     animation-fill-mode: forwards;
+}
+
+/* iPhone X and Xs Max */
+@media only screen 
+    and (min-device-width: 375px) 
+    and (min-device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) { 
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    /* styles */
+  
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.heading-primary {
+    color:white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+  
+
+}
+.heading-primary-main{
+    font-size: 25px;
+}
+}
+
+
+
+@media only screen 
+and (min-device-width: 414px) 
+and (min-device-height: 736px)
+
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+    .heading-primary-main{
+        font-size: 20px;
+    }
+
 }

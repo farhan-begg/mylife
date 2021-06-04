@@ -260,3 +260,11 @@ img.rounded-circle{
   height: 100px;
   margin-left: 75px;
 }
+
+
+
+input[type="text"], input[type="number"] {
+  width: 80%;
+  color: grey;
+  margin-left: 10px;
+}

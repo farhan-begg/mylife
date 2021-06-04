@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import { useState, useEffect } from 'react';
 import moment from 'moment';
-import firebase, { auth } from '../firebase';
+import firebase from '../firebase';
 import { collatedTasksExist } from '../helpers';
 
 export const useTasks = selectedProject => {

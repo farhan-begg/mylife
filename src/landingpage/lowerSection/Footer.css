@@ -1,0 +1,121 @@
+.main-footer {
+    color: grey;
+ 
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+
+    font-weight: lighter;
+    margin-top: 5%;
+    justify-content: space-evenly;
+    opacity: .7;
+
+    
+  
+
+  }
+
+  .row{
+ 
+      padding: 25px;
+      font-weight: lighter;
+  }
+
+.title-footer{
+    font-weight: lighter;
+}
+
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+   
+  }
+  .content-wrap {
+    flex: 1;
+  }
+
+  .col > li {
+    font-weight: lighter;
+  }
+
+  .list-unstyled{
+    font-weight: lighter;
+    font-size: small;
+  }
+
+
+  /* iPhone X and Xs Max */
+@media only screen 
+and (min-device-width: 375px) 
+and (min-device-height: 812px) 
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) {
+    
+    .main-footer {
+        color: grey;
+     
+        padding-top: 3em;
+        position: relative;
+        bottom: 0;
+    
+        font-weight: lighter;
+        margin-top: 5%;
+        justify-content: space-evenly;
+     
+        font-size: small;
+      
+    
+      }
+    .row{
+ 
+        padding: 25px;
+        font-weight: lighter;
+    }
+  
+  .title-footer{
+      font-weight: lighter;
+      font-size: small;
+  }
+  
+    .page-container {
+      display: flex;
+      flex-direction: column;
+      font-size: small;
+      margin-left: auto;
+      margin-right: 25px;
+   
+  
+     
+    }
+    .content-wrap {
+      flex: 1;
+    }
+  
+   
+    .list-unstyled {
+      font-weight: lighter;
+      font-size: small;
+    }
+   h1 > li {
+        font-size: 10px;
+    }
+
+}
+
+
+
+@media only screen 
+and (min-device-width: 414px) 
+and (min-device-height: 736px)
+
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+      h1 > li {
+        font-size: 8px;
+    }
+    .title-footer{
+      font-weight: lighter;
+      font-size: 15px;
+  }
+}

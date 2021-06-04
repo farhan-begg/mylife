@@ -1,8 +1,7 @@
 
 // import loginImg from "/login.svg";
-import React, { Component, useCallback } from 'react'
+import React, { useCallback } from 'react'
 import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
 import { withRouter } from "react-router";
 import firebase from "../firebase";
 

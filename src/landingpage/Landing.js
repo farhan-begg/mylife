@@ -1,13 +1,15 @@
 
-import React from 'react';
-// import { Navbar, Jumbotron, Nav, Container } from 'react-bootstrap';
+import React ,{useEffect}from 'react';
+import Footer from './lowerSection/Footer';
 import './Landing.css';
-
-
-
+import Landingdiv from './lowerSection/Landingdiv'
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 function Landing() {
-
+  useEffect(() => {
+    Aos.init({duration: 2000})
+  }, [])
   return (
     <div>
       <div>
@@ -24,12 +26,11 @@ function Landing() {
         </header>
       </div>
       <div>
-
-      
       </div>
       <div>
-
       </div>
+      <div data-aos="fade-left"> <Landingdiv/></div>
+     <div data-aos="fade-right"><Footer/></div>
     </div>
 
   );

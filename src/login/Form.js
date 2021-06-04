@@ -33,6 +33,7 @@ class Form extends React.Component {
         const current = isLogginActive ? "Register" : "Login";
         const currentActive = isLogginActive ? "login" : "register";
         return (
+            <div className="background-image">
             <div className="login-section">
                 <div className="login">
                     <div className="container" ref={ref => (this.container = ref)}>
@@ -50,6 +51,7 @@ class Form extends React.Component {
                         onClick={this.changeState.bind(this)}
                     />
                 </div>
+            </div>
             </div>
         );
     }

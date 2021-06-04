@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import './Progressbar.css'
-import firebase, { auth } from '../../firebase'
-import { Button, Card, FormControl, InputGroup, ModalTitle } from "react-bootstrap";
+import firebase from '../../firebase'
+import { FormControl} from "react-bootstrap";
 import { BsFolderMinus, BsPlus } from "react-icons/bs";
-import { Content } from "../../components/layout/Content";
+
 
 
 const colors = [
@@ -184,7 +184,7 @@ class ProgressBar extends Component {
             <div className="sidebar" data-testid="sidebar">
             <div className="sidebar__generic">
                 
-            <img class="rounded-circle" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
+            <img className="rounded-circle" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
           data-holder-rendered="true"/>
 
                 

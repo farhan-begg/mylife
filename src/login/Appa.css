@@ -8,19 +8,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 25%;
+
+
   margin-left: auto;
   margin-right: auto;
   position: relative;
   z-index: 99;
+ 
 }
 
 label{
   color: white !important;
 }
 .login-section{
-  height: 25%;
+  height: 100vh;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+}
+
+.background-image{
+  
 }
 .base-container .header-99 {
   color: white;
