@@ -5,22 +5,6 @@ body {
 }
 
 
-.progressbar_tasks{
-  margin: 0;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  backdrop-filter: blur(30px);
-  margin-left: 266px;
-  height:100vh;
-  vertical-align: top;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 80px;
-  padding-bottom: 84px;
-  position: fixed;
-  overflow: auto;
-  padding: 25px;
-}
 .card{
   background-color: #363E4A;
 display: flex;
@@ -58,7 +42,7 @@ input[type="number"] {
   border: 0;
   border-radius: 0;
   border-bottom: 0.1px solid rgba(98, 98, 98, 0.156);
-  color: black;
+  color: rgb(171, 167, 167);
   font-family: "Lato", sans-serif;
   font-size: 1.2em;
   font-weight: 300;
@@ -75,12 +59,14 @@ input[type="number"] {
 
 #progress {
   position: absolute;
-  bottom: -100px;
+  top: 140px;
   right: 22px;
-  color: green;
-  margin: 120px 0 10px 0;
-  border-radius: 100%;
+  color: #00a2ff;
+
   cursor: pointer;
+  transition: color 3s ease;
+
+  font-size: 1em;
 
 }
 
@@ -99,13 +85,13 @@ input[type="number"] {
 .lower span {
   position: absolute;
   top: 1px;
-  right: 10px;
-  font-size: 1.5em;
-  font-weight: bold;
+  right: 20px;
+  font-size: 1em;
+
   cursor: pointer;
 
   transition: color 0.2s ease;
-  color: black;
+  color: #e3505a;
 }
 
 
@@ -154,6 +140,18 @@ input[type="number"] {
   transform: scale(0.9);
 }
 
+div.four.columns{
+
+  margin: 25px;
+  width: 40%;
+  border-bottom: .5px solid rgb(0, 162, 255);
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+ 
+}
 @media screen and (max-width: 550px) {
   .columns {
   
@@ -223,11 +221,11 @@ span.add-button:hover{
 
 .progress_tasks {
   margin: 0;
-  width: 100%;
+  width: 70%;
+
   background-color: rgb(255, 255, 255);
   backdrop-filter: blur(30px);
-  margin-left: 266px;
-  border-right: 1px solid #f1f1f1;
+  margin-left: 350px;
   height:100vh;
   vertical-align: top;
   padding-left: 40px;
@@ -238,6 +236,11 @@ span.add-button:hover{
   overflow: auto;
 
 }
+.progress_tasks::-webkit-scrollbar{
+  display: none;
+}
+
+
 @media (max-width: 900px) {
   .progress_tasks {
     margin-left: 0;
@@ -251,7 +254,7 @@ span.add-button:hover{
   font-weight: lighter;
   margin: 20px;
   padding-left: 25px;
-  padding-bottom: 40p
+  padding-bottom: 40px
 }
 
 
@@ -263,8 +266,7 @@ img.rounded-circle{
 
 
 
-input[type="text"], input[type="number"] {
-  width: 80%;
-  color: grey;
-  margin-left: 10px;
+div.initial {
+  padding: 10px;
+  margin-right: 10px;
 }

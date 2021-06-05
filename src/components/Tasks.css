@@ -3,12 +3,11 @@
   ============================================ */
 
 
-  body{
-
-  }
+  
 .tasks {
   margin: 0;
-  width: 100%;
+
+  width: 75%;
   background-color: rgb(255, 255, 255);
   backdrop-filter: blur(30px);
   margin-left: 266px;
@@ -16,14 +15,19 @@
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 80px;
-  padding-bottom: 84px;
   position: fixed;
+  height: 100vh;
+  position: fixed;
+
+
 
 }
 @media (max-width: 900px) {
   .tasks {
     margin-left: 0;
     width: 100%;
+    position: fixed;
+  
 
   }
 }
@@ -243,10 +247,4 @@
 }
 .task-date__list li div:nth-child(1) span:first-of-type svg {
   fill: grey;
-}
-
-input[type="text"], input[type="number"] {
-  width: 80%;
-  color: grey;
-  padding: 10px;
 }

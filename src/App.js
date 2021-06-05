@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Todolist from './components/Todolist';
-import Customnavbar from './components/navbar/Navbar'
+import Customnavbar from './components/Navbarr/Navbar'
 import ProgressBar from './habit-tracker/progressbar/Progressbar'
 import Form from './login/Form'
 import { AuthProvider } from "./login/Auth";

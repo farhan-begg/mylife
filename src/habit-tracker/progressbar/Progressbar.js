@@ -216,10 +216,12 @@ class ProgressBar extends Component {
 
                                     <div className="lower">
                                         <span onClick={() => { this.removeHabit(i) }} >
-                                        <BsFolderMinus/>
+                                        <i class="fas fa-minus"></i>
                                         </span>
-                                        <span type="button"  id="progress" onClick={() => { this.completeReps(i) }}>  <BsPlus /></span>
-
+                                        <span  id="progress" onClick={() => { this.completeReps(i) }}> <i className="fas fa-plus"></i>
+           
+</span>
+               
                                         {/* <button id="progress" onClick={() => { this.completeReps(i) }}><i class="fa fa-plus"></i> */}
                                         {/* </button> */}
                                

@@ -1,9 +1,10 @@
-
+/* 
 .navbar {
 
 
-  font-weight: 200;
-  background-color: #363E4A;
+  font-weight: 300;
+
+
 
 
 
@@ -12,14 +13,17 @@
 
 }
 
+.navbar-brand{
+color: grey !important;
+}
 
 
 
 
 
 
-.navbar-light .navbar-nav .nav-link {
-  color: rgb(255, 255, 255) !important;
+ a.nav-link {
+  color: rgb(83, 83, 83) !important;
   
 
   
@@ -67,10 +71,4 @@
     transform: perspective(5000px) rotateY(360deg);
   }
 }
-
-
-@media (min-width: 992px){
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 0 1.5rem 0 1.5rem !important;
-  }
-}
+ */

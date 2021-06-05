@@ -11,7 +11,7 @@ function Landing() {
     Aos.init({duration: 2000})
   }, [])
   return (
-    <div>
+    <div className="landing-section">
       <div>
         <header className="header-1" >
           <div className="logo-box">

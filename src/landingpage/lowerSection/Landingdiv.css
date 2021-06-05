@@ -27,8 +27,7 @@
 
 
 .card{
-  background-color: #1c1b29;
-  
+  background-color: white !important;
   box-shadow: 0 0 30px rgba(0,0,0,0.18);
 }
 .img-container{
@@ -227,7 +226,7 @@ and (orientation: portrait) {
 
 /* styles */
 .details>p{
-  color: #a0a0a0;
+  color: black;
   font-size: 10px;
   line-height: 12px;
   font-weight: lighter;
@@ -237,7 +236,7 @@ and (orientation: portrait) {
 }
 
 .details > span {
-  color: grey;
+  color: black;
   font-size: .8em;
   font-weight: lighter;
 }

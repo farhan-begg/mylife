@@ -32,7 +32,7 @@ function Customnavbar() {
     return (
         <div className="background-image"> 
         
-        <Navbar collapseOnSelect expand="lg" >
+        <Navbar collapseOnSelect expand="md" >
 
             <div className="Logo"></div>
             <Navbar.Brand className="navbar_brand"  style={{ color: "white" }} href="/" >My Lyfe</Navbar.Brand>
@@ -44,14 +44,7 @@ function Customnavbar() {
                     <Nav.Link href="/habit">Habit Tracker 📈</Nav.Link>
 
 
-                    {!usersignedin && (
-                        <Nav.Link href="/login">Login/Register 👤</Nav.Link>
-                    )}
-
-                    {usersignedin && (
-                        <button className="sign-out-button" align="right" onClick={handleSignout}>Sign out</button>)
-
-                    }
+             
 
                 </Nav>
             </Navbar.Collapse>

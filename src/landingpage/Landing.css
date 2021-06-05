@@ -5,7 +5,9 @@
     background-position: center;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+   
 }
+
 
 .logo-box {
     position: absolute;
@@ -190,9 +192,7 @@
   
 .text-box {
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+ 
     text-align: center;
 
 }
@@ -208,6 +208,69 @@
 .heading-primary-main{
     font-size: 25px;
 }
+
+.heading-primary-main {
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 15px;
+
+    animation-name: moveInLeft;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in;
+}
+
+
+.heading-primary-sub {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    
+    animation-name: moveInRight;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+}
+
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    80% {
+        transform: translateX(0);
+
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 100;
+        transform: translate(0)
+         
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(0) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(0) rotateY(0)
+    }
+}
+
+
 }
 
 
@@ -218,8 +281,86 @@ and (min-device-height: 736px)
 
 and (-webkit-device-pixel-ratio: 3)
 and (orientation: portrait) { 
-    .heading-primary-main{
-        font-size: 20px;
+
+    .text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
+    
+    .heading-primary {
+        color:white;
+        text-transform: uppercase;
+    
+        backface-visibility: hidden;
+        margin: 60px;
+    
+    }
+    
+    
+    .heading-primary-main {
+        display: block;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 15px;
+    
+     
+    }
+    
+    
+    .heading-primary-sub {
+        display: block;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2.4px;
+        
+        animation-name: moveInRight;
+  
+    }
+
+    @keyframes moveInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(0);
+        }
+        80% {
+            transform: translateX(0);
+    
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes moveInBottom {
+        0% {
+            opacity: 0;
+            transform: translateY(0);
+        }
+    
+        100% {
+            opacity: 100;
+            transform: translate(0)
+             
+        }
+    }
+    
+    @keyframes rotate {
+        0% {
+            transform: perspective(0) rotateY(0deg);
+        }
+        100% {
+            transform: perspective(0) rotateY(0)
+        }
+    }
+    
+    
+
+
+
+    
 
 }
