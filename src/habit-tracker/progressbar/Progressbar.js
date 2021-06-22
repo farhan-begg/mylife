@@ -218,9 +218,9 @@ class ProgressBar extends Component {
                                         <span onClick={() => { this.removeHabit(i) }} >
                                         <i class="fas fa-minus"></i>
                                         </span>
-                                        <span  id="progress" onClick={() => { this.completeReps(i) }}> <i className="fas fa-plus"></i>
+                                         <i   id="progress" onClick={() => { this.completeReps(i) }}className="fas fa-plus"></i>
            
-</span>
+
                
                                         {/* <button id="progress" onClick={() => { this.completeReps(i) }}><i class="fa fa-plus"></i> */}
                                         {/* </button> */}
