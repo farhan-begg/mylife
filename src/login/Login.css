@@ -1,6 +1,67 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+.bg-login {
+  background-image: url("http://hdwpro.com/wp-content/uploads/2019/02/mountain-4K-Nature-image.jpg");
+}
 
-
+.base-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #51344D;
+}
+.base-container .header-99 {
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+}
+.base-container .content-99 {
+  display: flex;
+  flex-direction: column;
+}
+.base-container .content-99 .image-99 {
+  margin-top: 10px;
+}
+.base-container .content-99 .image-99 img {
+  width: 50%;
+  height: 50%;
+  border-radius: 24px;
+  padding: 10px;
+}
+.base-container .content-99 .form {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.base-container .content-99 .form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+}
+.base-container .content-99 .form .form-group label {
+  font-size: 20px;
+}
+.base-container .content-99 .form .form-group input {
+  margin-top: 6px;
+  min-width: 18em;
+  height: 37px;
+  padding: 0px 10px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f3f3f3;
+  border: 0;
+  border-radius: 4px;
+  margin-bottom: 31px;
+  transition: all 250ms ease-in-out;
+}
+.base-container .content-99 .form .form-group input:focus {
+  outline: none;
+  box-shadow: 0px 0px 12px 0.8px #3474dbb2;
+}
+.base-container .footer {
+  margin-top: 3em;
+}
 
 .login {
   width: 27em;
@@ -8,36 +69,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-
   margin-left: auto;
   margin-right: auto;
   position: relative;
   z-index: 99;
- 
 }
 
-label{
+label {
   color: white !important;
 }
-.login-section{
+
+.login-section {
   height: 100vh;
   padding-top: 2em;
   padding-bottom: 2em;
-
 }
 
-.background-image{
-  
-}
 .base-container .header-99 {
   color: white;
 }
+
 .login .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #363E4A;;
+  background-color: #363E4A;
   box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.2);
   border-radius: 4px;
   position: relative;
@@ -48,18 +104,17 @@ label{
   padding: 17px 10px;
 }
 
-
 base-container .content-99 .form .form-group label {
   color: white;
   font-size: 20px;
 }
+
 .login .right-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 90%;
-  background-image: linear-gradient(to right bottom, rgba(255, 242, 67, 0.589) 5%, rgb(136, 204, 221) 100%), url("https://miro.medium.com/max/3172/1*LIJf-T5WXGsUVC7d4Ji8nA.jpeg");
-
+  background-image: linear-gradient(to right bottom, rgba(255, 242, 67, 0.589) 5%, #88ccdd 100%), url("https://miro.medium.com/max/3172/1*LIJf-T5WXGsUVC7d4Ji8nA.jpeg");
   width: 100%;
   position: absolute;
   right: -34%;
@@ -69,20 +124,25 @@ base-container .content-99 .form .form-group label {
   cursor: pointer;
   box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.281);
 }
+
 .login .right-side.right {
   right: -40%;
   align-items: flex-end;
 }
+
 .login .right-side.right:hover {
   right: -45%;
 }
+
 .login .right-side.left {
   right: 40%;
   align-items: flex-start;
 }
+
 .login .right-side.left:hover {
   right: 45%;
 }
+
 .login .right-side .text {
   font-size: 21px;
   font-weight: 500;
@@ -102,13 +162,13 @@ base-container .content-99 .form .form-group label {
   transition: all 250ms ease-in-out;
   cursor: pointer;
 }
+
 .submit-button:hover {
   background-color: #2386c8;
 }
+
 .submit-button:focus {
   outline: none;
 }
 
-/*# sourceMappingURL=Appa.css.map */
-
-
+/*# sourceMappingURL=Login.css.map */

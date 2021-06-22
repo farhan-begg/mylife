@@ -2,7 +2,7 @@
 import React ,{useEffect}from 'react';
 import Footer from './lowerSection/Footer';
 import './Landing.css';
-import Landingdiv from './lowerSection/Landingdiv'
+import LandingCard from './lowerSection/LandingCard'
 import Aos from "aos";
 import "aos/dist/aos.css"
 
@@ -29,7 +29,7 @@ function Landing() {
       </div>
       <div>
       </div>
-      <div data-aos="fade-left"> <Landingdiv/></div>
+      <div data-aos="fade-left"> <LandingCard/></div>
      <div data-aos="fade-right"><Footer/></div>
     </div>
 

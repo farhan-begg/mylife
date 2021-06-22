@@ -1,4 +1,4 @@
-import './style.scss'
+import './Login.scss'
 
-export { Login } from "./login";
+export { Login } from "./Login";
 export { Register } from "./register";

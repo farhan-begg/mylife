@@ -1,5 +1,5 @@
 import React from "react";
-import "./Appa.css";
+import "./Login.css";
 import { Login, Register } from "./index";
 
 class Form extends React.Component {

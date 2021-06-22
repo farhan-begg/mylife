@@ -9,10 +9,7 @@ export const Todolist = () => {
     return (
         <SelectedProjectProvider>
             <ProjectsProvider>
-                <main
-                    data-testid="application"
-
-                >
+                <main data-testid="application">
                     <Content />
                 </main>
             </ProjectsProvider>

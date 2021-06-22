@@ -2,7 +2,7 @@ import React from 'react'
 import lasvegas from './images/lasvegas.png'
 import todolist from './images/todolist.png'
 import login from './images/login.png'
-import './Landingdiv.css'
+import './LandingCard.css'
 const Landingdiv = () => {
     return (
         <div className="section">
