@@ -17,7 +17,7 @@
     "firebase-tools": "^8.20.0",
     "griz": "^1.3.1",
     "jquery": "^3.5.1",
-    "moment": "2.27.0",
+    "moment": "2.29.2",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
